@@ -2,7 +2,7 @@ const $header = $('.header');
 const $header_menu = $('.header_menu');
 const $nav = $('#nav');
 const $btn_nav =  $('.btn_toggle_nav');
-
+const $btn_dep2 = $('.nav_dep1_tit');
 
 $(window).on('load resize',function(){
 // Hide Header on on scroll down
@@ -99,6 +99,18 @@ function toggle_nav(){
     }
 }
 
+$btn_dep2.on('click',function(){
+    let $dep1 = $(this).parent('.nav_dep1_item');
+    let $dep2 = $dep1.find('.nav_dep2');
+    $dep1.siblings('.nav_dep1_item').removeClass('on').find('.nav_dep2').slideUp(200);
+    if($dep1.hasClass('on')){
+        $dep1.removeClass('on');
+        $dep2.slideUp(200);
+    }else{
+        $dep1.addClass('on');
+        $dep2.slideDown(200);
+    }
+});
 
 
 

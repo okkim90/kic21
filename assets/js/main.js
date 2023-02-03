@@ -98,11 +98,28 @@ startProgressbar();
 
 let main_notice = new Swiper('.main_notice', {
   slidesPerView: 2,
-  loop: true,
+  spaceBetween: 40,
+  slidesPerColumn: 0,
+  loop:true,
+  
   navigation: {
     nextEl: '.main_notice_next',
     prevEl: '.main_notice_prev',
   },
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      slidesPerColumn: 2,
+      loop:false
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      slidesPerColumn: 0,
+      loop:true,
+    }
+  }
 });
 
 

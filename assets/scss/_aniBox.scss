@@ -10,7 +10,7 @@
         opacity: 0;
         &.gogo {
             opacity: 1;
-            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            transition: opacity 0.8s cubic-bezier(.42,0,.38,1), transform 0.8s cubic-bezier(.42,0,.38,1);
         }
     }
     &.ani_right {
@@ -22,7 +22,7 @@
         &.gogo {
             opacity: 1;
             transform: translateX(0);
-            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            transition: opacity 0.8s cubic-bezier(.42,0,.38,1), transform 0.8s cubic-bezier(.42,0,.38,1);
         }
     }
     &.ani_left {
@@ -34,7 +34,7 @@
         &.gogo {
             opacity: 1;
             transform: translateX(0);
-            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            transition: opacity 0.8s cubic-bezier(.42,0,.38,1), transform 0.8s cubic-bezier(.42,0,.38,1);
         }
     }
     &.ani_top {
@@ -46,7 +46,7 @@
         &.gogo {
             opacity: 1;
             transform: translateY(0);
-            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            transition: opacity 0.8s cubic-bezier(.42,0,.38,1), transform 0.8s cubic-bezier(.42,0,.38,1);
         }
     }
     &.ani_bot {
@@ -58,7 +58,7 @@
         &.gogo {
             opacity: 1;
             transform: translateY(0);
-            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            transition: opacity 0.8s cubic-bezier(.42,0,.38,1), transform 0.8s cubic-bezier(.42,0,.38,1);
         }
     }
 
@@ -72,7 +72,7 @@
         img {
             opacity: 0;
             transform:scale(1.2);
-            transition:all 1s ease-in-out ;
+            transition:all 1s cubic-bezier(.42,0,.38,1) ;
 
         }
         &.gogo {
@@ -124,7 +124,7 @@
             width: 100%;
             height: 101%;
             background-color: #fff;
-            transition: all 1s ease-in-out;
+            transition: all 1s cubic-bezier(.42,0,.38,1);
             z-index: 99;
         }
         &.gogo {
