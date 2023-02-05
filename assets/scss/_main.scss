@@ -997,7 +997,7 @@
             .txt_box {
                 padding: 0 30px;
                 .tit {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
                 .desc_box {
                     margin-top: 10px;
@@ -1023,28 +1023,29 @@
             }
         }
         &_list {
-            padding: 0 20px;
             margin: 0;
             display: block;
             height: auto;
             border-left: none;
             border-right: none;
+            border-top: 1px solid #d9d9d9;
+            border-bottom: 1px solid #d9d9d9;
         }
         &_item {
+            background-color: #fafafa;
             & + & {
                 border-left: none;
-                margin-top: 20px;
+                border-top: 1px solid #d9d9d9;
             }
         }
         &_link {
             border-radius: 10px;
-            background-color: #fff;
-            border: 1px solid #000;
+            background-color: #fafafa;
             &:hover {
                 background-color: #fff;
             }
             .txt_box {
-                padding: 25px 20px;
+                padding: 35px 20px;
                 display: flex;
                 text-align: left;
                 align-items: center;
@@ -1060,15 +1061,15 @@
                     margin-left: 20px;
                     
                     .tit {
-                        font-size: 20px;
+                        font-size: 16px;
                         color: #222;
                     }
                     .desc_box {
                         margin-top: 10px;
                     }
                     .desc1 {
-                        font-size: 15px;
-                        color: #222;
+                        font-size: 14px;
+                        color: #666;
                         br {
                             display: none;
                         }
@@ -1116,6 +1117,9 @@
                 }
             }
         }
+    }
+    .main_related {
+        padding: 10px;
     }
 
     .estimate_list {
