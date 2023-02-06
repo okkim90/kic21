@@ -8,7 +8,7 @@ $(window).on('load resize',function(){
 // Hide Header on on scroll down
     let didScroll = false;
     let lastScrollTop = 0;
-    let delta = 5;
+    let delta = 10;
     let navbarHeight = $('#header').outerHeight();
 
     $(window).scroll(function(event){
@@ -23,7 +23,7 @@ $(window).on('load resize',function(){
             hasScrolled();
             didScroll = false;
         }
-    }, 0);
+    }, 100);
 
 
     

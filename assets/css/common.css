@@ -135,6 +135,7 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   color: #000;
   letter-spacing: -0.5px;
+  overflow-x: hidden;
 }
 
 article,
@@ -248,24 +249,24 @@ textarea {
   color: #000;
 }
 
-input[type=text],
 input[type=submit],
-input[type=password],
-input[type=search],
-input[type=number],
-input[type=reset],
-input[type=email],
-input[type=tel],
-input[type=search],
-input[type=file],
-input[type=email],
-input[type=tel] {
-  padding: 0 22px;
-  height: 59px;
-  line-height: 59px;
-  border: 1px solid #d7d7d7;
-  font-size: 18px;
-  font-weight: 400;
+input[type=file] {
+  cursor: pointer;
+}
+
+/* Select box 스타일 초기화 */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(../images/common/arrow_select_box.svg);
+  background-position: calc(100% - 15px) center;
+  background-repeat: no-repeat;
+}
+
+/* IE 에서 Select box 화살표 제거 */
+select::-ms-expand {
+  display: none;
 }
 
 input[type=radio],
@@ -2388,4 +2389,212 @@ input::-webkit-search-results-decoration {
   .main_related_list li {
     width: 50%;
   }
+}
+.posR {
+  position: relative;
+}
+
+.right_nav {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  white-space: nowrap;
+  background-color: #ecf2fa;
+  border-radius: 20px;
+  border: 1px solid #c5d1e6;
+  width: 140px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.right_nav_area {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+.right_nav_item {
+  padding: 30px 0;
+}
+
+.sub_visual {
+  height: 500px;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
+.sub_visual .txt_box {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+.sub_visual .txt_box .tit {
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+.sub_visual .txt_box .desc {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 1em;
+}
+.sub_visual.sub_cs {
+  background-image: url(../images/sub/sub_visual_cs.jpg);
+}
+
+.sub_nav {
+  border-bottom: 1px solid #d9d9d9;
+  background-color: #fff;
+}
+.sub_nav_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.sub_nav_item a {
+  display: block;
+  font-size: 18px;
+  line-height: 80px;
+  color: #222;
+  opacity: 0.5;
+  padding: 0 35px;
+  font-weight: normal;
+}
+.sub_nav_item.on a {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.sub_wrap {
+  position: relative;
+  z-index: 99;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.sub_tit {
+  text-align: center;
+  padding: 100px 0;
+}
+.sub_tit .tit {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.f_input {
+  width: 100%;
+  height: 60px;
+  padding: 0 30px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.f_select {
+  width: 100%;
+  height: 60px;
+  padding: 0 30px;
+  padding-right: 60px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.f_textarea {
+  width: 100%;
+  height: 300px;
+  padding: 19px 30px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.f_btn {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  max-width: 180px;
+  width: 100%;
+  padding: 0 20px;
+  font-size: 18px;
+  height: 60px;
+  background-color: #555;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  color: #fff;
+}
+.f_btn.ty_big {
+  max-width: 250px;
+  height: 70px;
+  font-size: 20px;
+}
+.f_btn.bg_blue {
+  background-color: #1f2085;
+  color: #fff;
+}
+.f_btn.bg_grey {
+  background-color: #555;
+  color: #fff;
+}
+.f_btn.line_blue {
+  color: #222;
+  border-color: #1f2085;
+}
+.f_btn.line_black {
+  color: #222;
+  border: 1px solid #222;
+}
+
+.search_form {
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f6f7fa;
+  justify-content: center;
+}
+.search_form > * {
+  height: 50px;
+}
+.search_form_select {
+  width: 200px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border: 1px solid #bababa;
+  padding: 0 20px;
+  font-size: 18px;
+}
+.search_form_input {
+  flex: 1;
+  box-sizing: border-box;
+  border: 1px solid #bababa;
+  max-width: 540px;
+  margin: 0 20px;
+  padding: 0 20px;
+  font-size: 18px;
+}
+.search_form_btn {
+  width: 90px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  background-color: #1f2085;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+}
+.search_form_btn .ico_search {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/common/ico_search.svg) no-repeat center center;
 }
