@@ -33,7 +33,7 @@ $(window).on('load resize',function(){
         if(Math.abs(lastScrollTop - st) <= delta)
             return;
 
-        if (st > lastScrollTop ){
+        if (st > lastScrollTop &&  !$('#header').hasClass('top') ){
             // Scroll Down
             if($('#header').hasClass('nav_on') || $('#header').hasClass('m_nav_on')){
             
