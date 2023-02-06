@@ -99,9 +99,11 @@ startProgressbar();
 let main_notice = new Swiper('.main_notice', {
   slidesPerView: 2,
   spaceBetween: 40,
-  slidesPerColumn: 0,
+  slidesPerColumn: 1,
   loop:true,
-  
+  observer: true,
+  observeParents: true,
+  rebuildOnUpdate : true,
   navigation: {
     nextEl: '.main_notice_next',
     prevEl: '.main_notice_prev',
@@ -110,16 +112,22 @@ let main_notice = new Swiper('.main_notice', {
     768: {
       slidesPerView: 1,
       spaceBetween: 0,
-      slidesPerColumn: 2,
-      loop:false
+      slidesPerColumn: 1,
+      loop:true
     },
     1024: {
       slidesPerView: 3,
       spaceBetween: 20,
-      slidesPerColumn: 0,
+      slidesPerColumn: 1,
       loop:true,
     }
   }
+});
+$(window).on('resize',function(){
+  
+   // main_notice.update();
+    
+
 });
 
 

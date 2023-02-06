@@ -2058,7 +2058,7 @@ input::-webkit-search-results-decoration {
 
 @media (max-width: 1024px) {
   .main_sec {
-    margin-top: 140px;
+    margin-top: 120px;
   }
   .main_sec_tit {
     margin-bottom: 50px;
@@ -2161,6 +2161,9 @@ input::-webkit-search-results-decoration {
 @media (max-width: 767px) {
   .main_sec {
     margin-top: 80px;
+  }
+  .main_sec_wrap .main_sec {
+    margin-top: 60px;
   }
   .main_sec_tit {
     margin-bottom: 30px;
@@ -2315,21 +2318,8 @@ input::-webkit-search-results-decoration {
   .main_notice_wrap {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
-  .main_notice_card {
-    display: flex;
-    padding: 10px 0;
-    align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  .main_notice_card .img_box {
-    flex-shrink: 0;
-    width: 80px;
-    padding-top: 80px;
-  }
   .main_notice_card .txt_box {
-    padding: 0;
-    padding-left: 14px;
-    background-color: #fff;
+    padding: 12px 15px;
   }
   .main_notice_card .txt_box .date {
     font-size: 12px;
@@ -2358,6 +2348,9 @@ input::-webkit-search-results-decoration {
   .estimate_list .list_link {
     height: 50px;
     padding-left: 12px;
+  }
+  .main_customer {
+    margin-top: 60px;
   }
   .main_customer_cont {
     text-align: center;
