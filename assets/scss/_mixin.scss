@@ -3,9 +3,15 @@
 /*반응형 화면 크기*/
 $breakpoint-m: 767px;
 $breakpoint-t: 1024px;
+$breakpoint-pcrm: 1700px;
 
 
-// responsive - mediaquery
+@mixin pcrm {
+    @media (max-width: #{$breakpoint-pcrm}) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media (max-width: #{$breakpoint-t}) {
         @content;
@@ -48,4 +54,8 @@ $c_key : map-get($colors, key);
     .fc#{$key} {
         color: $color;
     }
+}
+
+@include mobile {
+    $form_fz : 14px
 }

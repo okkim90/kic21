@@ -1,0 +1,116 @@
+.board_view {
+    border-top: 1px solid #222;
+    
+    font-size: 16px;
+    line-height: 1.6 ;
+    &_tit {
+        display: flex;
+        min-height: 99px;
+        align-items: center;
+        box-sizing: border-box;
+        font-size: 24px;
+        line-height: 1.6;
+        padding: 20px;
+        border-bottom: 1px solid $CLine;
+    }
+    &_info {
+        display: flex;
+        justify-content: flex-end;
+        color: #999;
+        padding: 20px;
+        &_item {
+            position: relative;
+            padding-right: 10px;
+            margin-right: 10px;
+            &:after {
+                content:'';
+                position: absolute;
+                width: 1px;
+                height: 12px;
+                background-color: $CLine;
+                right: 0;
+                top: 50%;
+                margin-top: -6px;
+            }
+            &:last-child {
+                padding-right: 0;
+                margin-right: 0;
+                &::after {
+                    display: none;
+                }
+            }   
+            
+        }
+    }
+    &_cont {
+        border-bottom: 1px solid $CLine;
+        padding: 20px 20px 40px;
+    }
+    &_file {
+        display: flex;
+        border-bottom: 1px solid $CLine;
+        .tit {
+            width: 140px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f7f7f7;
+            flex-shrink: 0;
+        }
+        .file_list {
+            font-size: 0;
+            margin-left: -20px;
+            margin-top: -10px;
+            padding: 20px;
+            min-width: 0;
+            li {
+                display: inline-block;
+                margin-left: 20px;
+                margin-top: 10px;
+                max-width: 100%;
+            }
+            .btn_down {
+                display: flex;
+                align-items: flex-start;
+                color: #0063be;
+                font-size: 16px;
+                line-height: 24px;
+                &:hover {
+                    text-decoration: underline;
+                }
+                
+                
+                .file_name {
+                    min-width: 0;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                &::before {
+                    content:'';
+                    width: 24px;
+                    height: 24px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-image: url(../images/common/ico_down.svg);
+                    flex-shrink: 0;
+                    margin-right: 4px;
+
+                }
+            }
+        }
+    }
+
+    &_nav {
+        margin-top: 100px;
+        &_item {
+            display: flex;
+            .tit {
+                width: 140px;
+                flex-shrink: 0;
+                text-align: center;
+            }
+        }
+    }
+}
