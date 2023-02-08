@@ -8,7 +8,13 @@
 
 /* layout*/
 @import "./layout";
+
+
+/* board */
+@import "./board_list";
 @import "./board_view";
+@import "./board_write";
+@import "./paging";
 
 
 /* page */

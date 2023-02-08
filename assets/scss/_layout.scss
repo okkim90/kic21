@@ -438,7 +438,7 @@
         }
      
     }
-}
+} 
 
 
 
@@ -448,6 +448,9 @@
 
     &.ty_main {
         padding-bottom: 0;
+    }
+    @include mobile {
+        padding-bottom: 60px;
     }
 }
 

@@ -24,7 +24,11 @@ $breakpoint-pcrm: 1700px;
     }
 }
 
-
+@mixin text-hidden-single {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
 @mixin text-hidden($line: 1, $lineHeight: 19, $auto: null) {
     display: -webkit-box;
     -webkit-line-clamp: $line;
@@ -44,18 +48,4 @@ $breakpoint-pcrm: 1700px;
         //처음부터 영역잡히게
         height: $lineHeight * $line + px;
     }
-}
-
-
-// colors
-$c_key : map-get($colors, key);
-
-@each $key, $color in $colors {
-    .fc#{$key} {
-        color: $color;
-    }
-}
-
-@include mobile {
-    $form_fz : 14px
 }

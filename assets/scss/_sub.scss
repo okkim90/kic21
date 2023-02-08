@@ -243,34 +243,64 @@
 
 .btn_area {
     text-align: center;
-    .taC {
-        text-align: center;
+    display: flex;
+    & > * {
+        margin: 0 5px;
+    }
+    &.taC {
+        justify-content: center;
     }
     &.ty_bot {
         margin-top: 70px;
+        @include mobile {
+            margin-top: 40px;
+        }
     }
 }
 
 .f_input {
     width: 100%;
+    max-width: 600px;
+    &.w100 {
+        max-width: 100%;
+    }
     height: 60px;
     padding: 0 30px;
     border: 1px solid #d9d9d9;
     box-sizing: border-box;
     font-size: 18px;
+    &[type='password']{
+        font-family: 'Verdana';
+    }
     // &.readonly {
     //     background-color: #f6f7fa;
     //     color: #999;
     // }
+
+    @include mobile {
+        font-size: 13px;
+        padding: 0 10px;
+        height: 40px;
+    }
 }
 .f_select {
     width: 100%;
+    max-width: 600px;
+    &.w100 {
+        max-width: 100%;
+    }
     height: 60px;
     padding: 0 30px;
     padding-right: 60px;
     border: 1px solid #d9d9d9;
     box-sizing: border-box;
     font-size: 18px;
+    @include mobile {
+        font-size: 13px;
+        padding: 0 10px;
+        padding-right: 30px;
+        height: 40px;
+    }
 }
 .f_textarea {
     width: 100%;
@@ -280,13 +310,18 @@
     box-sizing: border-box;
     font-size: 18px;
     line-height: 1.5;
+    @include mobile {
+        font-size: 13px;
+        padding: 10px;
+        height: 100px;
+    }
 }
 .f_btn {
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    max-width: 180px;
-    width: 100%;
+    min-width: 180px;
+
     padding: 0 20px;
     font-size: 18px;
     height: 60px;
@@ -295,11 +330,27 @@
     box-sizing: border-box;
     color: #fff;
     line-height: 58px;
+    @include mobile {
+        min-width: 120px;
+        height: 40px;
+        line-height: 38px;
+        font-size: 14px;
+    }
     &.ty_big {
-        max-width: 250px;
+        width: 250px;
+        max-width: 100%;
         height: 70px;
         line-height: 68px;
         font-size: 20px;
+
+        @include mobile {
+            min-width: 150px;
+            height: 45px;
+            line-height: 43px;
+            font-size: 14px;
+        }
+
+
     }
     &.bg_blue {
         background-color: #1f2085;
@@ -318,6 +369,12 @@
         color: #222;
         background-color: #fff;
         border: 1px solid #222;
+        transition: all .12s ease-in-out;
+        &:hover {
+            background-color: #555;
+            border-color: #555;
+            color: #fff;
+        }
     }
 }
 
@@ -403,237 +460,47 @@
     
 }
 
-.kic_list {
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
-    font-size: 16px;
-    line-height: 1.5;
-    
-
-    &_top {
+.sub_sec {
+    & + & {
+        margin-top: 100px;
+    }
+    &_tit {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 15px;
-        @include mobile { 
-            margin-bottom: 10px;
-        }
-
-    }
-    &_total {
-        font-size: 18px;
-        line-height: 1.5;
-        font-weight: bold;
-        span {
-            color: $CBrand;
-        }
-        @include mobile { 
-            font-size: 14px;
-        }
-    }
-
-    &_head {
-        display: flex;
-        border-bottom: 1px solid #222;
-        align-items: center;
-        padding: 10px 0;
-        font-weight: 500;
-        @at-root .kic_list & .col.tit {
-            text-align: center;
-            display: block;
-        }
-        @include mobile { 
-            display: none;
-        }
-    }
-   
-    &_item {
-        
-        & + & {
-            border-top: 1px solid #d9d9d9;
-        }
-        &.ty_notice {
-            background-color: #f6f7fa;
-            @include mobile {
-                .col.tit {
-                    width: calc(100% - 50px);
-                }
-                .col.num {
-                    display: block;
-                    width: auto;
-                    line-height: 0;
-                    margin-right: 5px;
-                }
-            }
-           
-        }
-    }
-    &_link {
-        display: flex;
-        
-        padding: 10px 0;
-        align-items: center;
-        @include mobile { 
-            padding: 10px;
-            flex-wrap: wrap;
-        }
-    }
-    .col {
-        text-align: center;
-        padding: 0 10px;
-        @include mobile { 
-            padding: 0;
-        }
-        &.tit {
-            flex: 1;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            line-height: 48px;
-            min-width: 0;
-            color: #222;
-            @include mobile { 
-                width: 100%;
-                flex: auto;
-                box-sizing: border-box;
-                padding: 0;
-                font-size: 14px;
-                line-height: 24px;
-                margin-right: 0;
-                padding-right: 0;
-                
-            }
-            .ico_attach {
-                margin-left: 6px;
-            }
-            .txt {
-                min-width: 0;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
-                
-            }
-        }
-        &.num {
-            width: 60px;
-            @include mobile { 
-                display: none;
-            }
-        }
-        &.date {
-            width: 100px;
-            flex-shrink: 0;
-        }
-        &.view {
-            width: 70px;
-            flex-shrink: 0;
-            
-        }
-        &.col_bot {
-            @include mobile { 
-                position: relative;
-                width: auto;
-                font-size: 13px;
-                line-height: 1.6;
-                color: #666;
-                margin-top: 4px;
-                &::after {
-                    content:'';
-                    display: inline-block;
-                    vertical-align: top;
-                    
-                    width: 1px;
-                    height: 12px;
-                    background-color: #d9d9d9;
-                    margin: 0 7px;
-                    margin-top: 4px;
-
-                }
-                &:last-child::after {
-                    display: none;
-                }
-            }
-        }
-    }
-    .ico_notice {
-        display: inline-block;
-        line-height: 30px;
-        padding: 0 10px;
-        border-radius: 15px;
-        background-color: $CBrand;
-        color: #fff;
-        font-size: 13px;
-        font-weight: bold;
-        font-style: normal;
+        margin-bottom: 30px;
         @include mobile {
-            padding: 0 5px;
-            line-height: 19px;
-            font-size: 11px;
-            font-weight: 500;
+            margin-bottom: 20px;
         }
-    }
-    .ico_attach {
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        flex-shrink: 0;
-        background: url(../images/common/ico_file.svg) no-repeat center center;
-    }
-}
-
-.paging {
-    &_wrap {
-        display: flex;
-        margin-top: 60px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        @include mobile {
-            margin-top: 40px;
-        }
-    }
-    &_btn {
-        display: block;
-        width: 30px;
-        height: 30px;
-        box-sizing: border-box;
-        line-height: 28px;
-        font-size: 16px;
-        color: #999;
-        //font-family: 'Montserrat';
-        margin: 0 2px;
-        flex-shrink: 0;
-        border: 1px solid transparent;
-        @include mobile {
-            width: 24px;
-            height: 24px;
-            font-size: 13px;
-            line-height: 22px;
-            margin: 0 1px;
-        }
-        &.current {
-            border: 1px solid $CBrand;
-            color: $CBrand;
+        .tit {
+            font-size: 40px;
+            line-height: 1.5;
             font-weight: bold;
+            @include mobile {
+                font-size: 22px;
+            }
         }
-        background-repeat: no-repeat;
-        background-position: center center;
         
-        &.ty_first {
-            background-image: url(../images/common/paging_first.svg);
+        .write_msg {
+            align-self: flex-end;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #999;
+            span {
+                color: $c_red ;
+            }
+            @include mobile {
+                font-size: 13px;
+            }
         }
-        &.ty_prev {
-            background-image: url(../images/common/paging_prev.svg);
-        }
-        &.ty_next {
-            background-image: url(../images/common/paging_next.svg);
-        }
-        &.ty_last {
-            background-image: url(../images/common/paging_last.svg);
-        }
-    }
-    &_list {
-        display: flex;
-        margin: 0 4px;
+
     }
 }
+
+
+
+
+
+
+
+
+

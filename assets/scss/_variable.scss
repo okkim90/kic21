@@ -24,13 +24,24 @@ $CBg2: #eceef0;
 $colors: (
     _key: #1f2085,
     _blue: #1e90ff,
-    _red: #f00,
+    _sky: #f6f7fa,
+    _red: #f02727,
     _lblue: #46b8ff,
     _orange: #ff7328,
     _green: #50c785,
     _yellow: #ff0,
     _purple: #3b1e9e,
 );
+
+// colors
+@each $key, $color in $colors {
+    .fc#{$key} {
+        color: $color;
+    }
+}
+$c_key : map-get($colors, _key);
+$c_red : map-get($colors, _red);
+$c_sky : map-get($colors, _sky);
 
 //Font
 $font: 'Noto Sans KR', sans-serif;

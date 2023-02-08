@@ -184,13 +184,14 @@
     </header>
     
     <main id="container" class="container">
+        <!-- sub 상단 이미지영역 -->
         <div class="sub_visual sub_cs">
             <!--[DEV] .sub_visual (서브 상단 비주얼)
-                회사소개: sub_company
-                교정안내: sub_business
-                교정절차 및 지원: sub_support
-                연구개발: sub_rnd
-                고객지원: sub_cs
+                회사소개: .sub_company
+                교정안내: .sub_business
+                교정절차 및 지원: .sub_support
+                연구개발: .sub_rnd
+                고객지원: .sub_cs
             -->
             <div class="txt_box">
                 <h2 class="tit">고객지원</h2>
@@ -202,8 +203,8 @@
             <div class="sub_nav_toggle"></div>
             <ul class="sub_nav_list">
                 <!-- [D] 현재페이지 활성화 on class -->
-                <li class="sub_nav_item on"><a href="">공지사항</a></li>
-                <li class="sub_nav_item"><a href="">Q&A</a></li>
+                <li class="sub_nav_item"><a href="">공지사항</a></li>
+                <li class="sub_nav_item on"><a href="">Q&A</a></li>
                 <li class="sub_nav_item"><a href="">자료실</a></li>
                 <li class="sub_nav_item"><a href="">관련기관</a></li>
                 <li class="sub_nav_item"><a href="">Contact us</a></li>
@@ -256,7 +257,7 @@
         <div class="sub_wrap">
             <div class="inner">
                 <div class="sub_tit">
-                    <h2 class="tit">공지사항</h2>
+                    <h2 class="tit">Q&A</h2>
                 </div>
                 <form action="" class="search_form">
                     <select name="" id="" class="search_form_select">
@@ -272,78 +273,84 @@
                 <div class="kic_list_wrap">
                     <div class="kic_list_top">
                         <div class="kic_list_total">전체 <span>1,000</span> 건</div>
-                        <div class="btn_box"></div>
+                        <div class="btn_box">
+                            <a href="qna_write.html" class="f_btn">문의하기</a>
+                        </div>
                     </div>
                     <div class="kic_list">
                         <div class="kic_list_head">
                             <div class="col num">번호</div>
+                            <div class="col status">진행상태</div>
                             <div class="col tit">제목</div>
+                            <div class="col writer">회사명</div>
                             <div class="col date">작성일자</div>
-                            <div class="col view">조회</div>
+                            <div class="col date">답변일자</div>
                         </div>
                         <ul class="kic_list_body">
-                            <!--[DEV] .kic_list_item 공지일 경우 .ty_notice 클래스 추가 -->
-                            <li class="kic_list_item ty_notice">
-                                <a href="notice_view.html" class="kic_list_link">
-                                    <div class="col num">
-                                        <i class="ico_notice">공지</i>
-                                    </div>
+                            
+                            <li class="kic_list_item">
+                                <a href="" class="kic_list_link">
+                                    <div class="col num">999</div>
+                                    <div class="col status">답변대기</div><!-- 답변 완료일시 on class 추가 -->
                                     <div class="col tit">
                                         <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목  제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
-                                        <i class="ico_attach"></i><!--첨부파일 있을 경우-->
+                                        <i class="ico_comment"></i><!--댓글 있을 경우 + 댓글 갯수 -->
                                     </div>
+                                    <div class="col writer col_bot">(주)회사이름</div>
                                     <div class="col date col_bot">2023-11-22</div>
-                                    <div class="col view col_bot">1,056</div>
-                                </a>
-                            </li>
-                            <li class="kic_list_item ty_notice">
-                                <a href="notice_view.html" class="kic_list_link">
-                                    <div class="col num">
-                                        <i class="ico_notice">공지</i>
-                                    </div>
-                                    <div class="col tit">
-                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
-                                        <i class="ico_attach"></i><!--첨부파일 있을 경우-->
-                                    </div>
-                                    <div class="col date col_bot">2023-11-22</div>
-                                    <div class="col view col_bot">1,056</div>
+                                    <div class="col date ty_answer col_bot">2023-11-22</div>
                                 </a>
                             </li>
                             <li class="kic_list_item">
                                 <a href="" class="kic_list_link">
-                                    <div class="col num">
-                                        999
-                                    </div>
+                                    <div class="col num">999</div>
+                                    <div class="col status">답변대기</div><!-- 답변 완료일시 on class 추가 -->
                                     <div class="col tit">
-                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
-                                        <i class="ico_attach"></i><!--첨부파일 있을 경우-->
+                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목  제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
+                                        <i class="ico_comment"></i><!--댓글 있을 경우 + 댓글 갯수 -->
                                     </div>
+                                    <div class="col writer col_bot">(주)회사이름</div>
                                     <div class="col date col_bot">2023-11-22</div>
-                                    <div class="col view col_bot">1,056</div>
+                                    <div class="col date ty_answer col_bot">2023-11-22</div>
                                 </a>
                             </li>
                             <li class="kic_list_item">
                                 <a href="" class="kic_list_link">
-                                    <div class="col num">
-                                        997
-                                    </div>
+                                    <div class="col num">999</div>
+                                    <div class="col status on">답변완료</div><!-- 답변 완료일시 on class 추가 -->
                                     <div class="col tit">
-                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
+                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목  제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
+                                        <i class="ico_comment"> 1</i><!--댓글 있을 경우 + 댓글 갯수 -->
                                     </div>
+                                    <div class="col writer col_bot">(주)회사이름</div>
                                     <div class="col date col_bot">2023-11-22</div>
-                                    <div class="col view col_bot">1,056</div>
+                                    <div class="col date ty_answer col_bot">2023-11-22</div>
                                 </a>
                             </li>
                             <li class="kic_list_item">
                                 <a href="" class="kic_list_link">
-                                    <div class="col num">
-                                        997
-                                    </div>
+                                    <div class="col num">999</div>
+                                    <div class="col status on">답변완료</div><!-- 답변 완료일시 on class 추가 -->
                                     <div class="col tit">
-                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
+                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목  제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
+                                        <i class="ico_comment">3</i><!--댓글 있을 경우 + 댓글 갯수 -->
                                     </div>
+                                    <div class="col writer col_bot">(주)회사이름</div>
                                     <div class="col date col_bot">2023-11-22</div>
-                                    <div class="col view col_bot">1,056</div>
+                                    <div class="col date ty_answer col_bot">2023-11-22</div>
+                                </a>
+                            </li>
+                            <li class="kic_list_item">
+                                <a href="" class="kic_list_link">
+                                    <div class="col num">999</div>
+                                    <div class="col status on">답변완료</div><!-- 답변 완료일시 on class 추가 -->
+                                    <div class="col tit">
+                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목  제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
+                                        <i class="ico_comment"> 2</i><!--댓글 있을 경우 + 댓글 갯수 -->
+                                    </div>
+                                    <div class="col writer col_bot">(주)회사이름</div>
+                                    <div class="col date col_bot">2023-11-22</div>
+                                    <div class="col date ty_answer col_bot">2023-11-22</div>
                                 </a>
                             </li>
                         </ul>
