@@ -18,6 +18,8 @@
      <script defer src="../assets/js/header.js"></script>
 
      <script defer src="../assets/js/common.js"></script>
+     <script defer src="../assets/js/fileupload.js"></script>
+
      <!--// js -->
 </head>
 <body>
@@ -184,13 +186,14 @@
     </header>
     
     <main id="container" class="container">
+        <!-- sub 상단 이미지영역 -->
         <div class="sub_visual sub_cs">
             <!--[DEV] .sub_visual (서브 상단 비주얼)
-                회사소개: sub_company
-                교정안내: sub_business
-                교정절차 및 지원: sub_support
-                연구개발: sub_rnd
-                고객지원: sub_cs
+                회사소개: .sub_company
+                교정안내: .sub_business
+                교정절차 및 지원: .sub_support
+                연구개발: .sub_rnd
+                고객지원: .sub_cs
             -->
             <div class="txt_box">
                 <h2 class="tit">고객지원</h2>
@@ -202,11 +205,11 @@
             <div class="sub_nav_toggle"></div>
             <ul class="sub_nav_list">
                 <!-- [D] 현재페이지 활성화 on class -->
-                <li class="sub_nav_item on"><a href="notice_list.html">공지사항</a></li>
+                <li class="sub_nav_item"><a href="notice_list.html">공지사항</a></li>
                 <li class="sub_nav_item"><a href="qna_list.html">Q&A</a></li>
                 <li class="sub_nav_item"><a href="reference_list.html">자료실</a></li>
                 <li class="sub_nav_item"><a href="related.html">관련기관</a></li>
-                <li class="sub_nav_item"><a href="contact.html">Contact us</a></li>
+                <li class="sub_nav_item on"><a href="contact.html">Contact us</a></li>
             </ul>
             <script>
                 let sub_nav = document.querySelector('.sub_nav');
@@ -253,113 +256,228 @@
             </div>
         </div>
 
-        <div class="sub_wrap">
+        <div id="sub_wrap" class="sub_wrap">
             <div class="inner">
                 <div class="sub_tit">
-                    <h2 class="tit">공지사항</h2>
+                    <h2 class="tit">Contact us</h2>
                 </div>
-                <form action="" class="search_form">
-                    <select name="" id="" class="search_form_select">
-                        <option value="">전체</option>
-                        <option value="">제목+내용</option>
-                        <option value="">제목</option>
-                        <option value="">내용</option>
-                        <option value="">작성자</option>
-                    </select>
-                    <input type="search" placeholder="검색어를 입력하세요." class="search_form_input">
-                    <button type="button" class="search_form_btn"><i class="ico_search"></i>검색</button>
-                </form>
-                <div class="kic_list_wrap">
-                    <div class="kic_list_top">
-                        <div class="kic_list_total">전체 <span>1,000</span> 건</div>
-                        <div class="btn_box"></div>
-                    </div>
-                    <div class="kic_list">
-                        <div class="kic_list_head">
-                            <div class="col num">번호</div>
-                            <div class="col tit">제목</div>
-                            <div class="col date">작성일자</div>
-                            <div class="col view">조회</div>
+                <div class="sub_tab">
+                    <ul class="sub_tab_list">
+                        <li class="sub_tab_item on"><a href="" class="sub_tab_link no_link">서울본사</a></li>
+                        <li class="sub_tab_item"><a href="" class="sub_tab_link no_link">부산지사</a></li>
+                        <li class="sub_tab_item"><a href="" class="sub_tab_link no_link">대전지사</a></li>
+                    </ul>
+                    <script>
+                        $('.sub_tab_link.no_link').on('click',function(e){
+                            e.preventDefault();
+                            let $li = $(this).parents('.sub_tab_item');
+                            let $idx = $li.index();
+                            let $tabCont = $('.tab_cont_wrap').find('.tab_cont');
+                            //console.log($idx);
+                            $li.addClass('on').siblings('.sub_tab_item').removeClass('on');
+                            $tabCont.removeClass('on');
+                            $tabCont.eq($idx).addClass('on');
+                        });
+                    </script>
+                </div>
+                <div class="sub_sec tab_cont_wrap">
+                    <div class="tab_cont on">
+                        <div class="sub_sec_tit">
+                            <h3 class="tit">서울본사</h3>
                         </div>
-                        <ul class="kic_list_body">
-                            <!--[DEV] .kic_list_item 공지일 경우 .ty_notice 클래스 추가 -->
-                            <li class="kic_list_item ty_notice">
-                                <a href="notice_view.html" class="kic_list_link">
-                                    <div class="col num">
-                                        <i class="ico_notice">공지</i>
-                                    </div>
-                                    <div class="col tit">
-                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목  제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
-                                        <i class="ico_attach"></i><!--첨부파일 있을 경우-->
-                                    </div>
-                                    <div class="col date col_bot">2023-11-22</div>
-                                    <div class="col view col_bot">1,056</div>
-                                </a>
-                            </li>
-                            <li class="kic_list_item ty_notice">
-                                <a href="notice_view.html" class="kic_list_link">
-                                    <div class="col num">
-                                        <i class="ico_notice">공지</i>
-                                    </div>
-                                    <div class="col tit">
-                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
-                                        <i class="ico_attach"></i><!--첨부파일 있을 경우-->
-                                    </div>
-                                    <div class="col date col_bot">2023-11-22</div>
-                                    <div class="col view col_bot">1,056</div>
-                                </a>
-                            </li>
-                            <li class="kic_list_item">
-                                <a href="notice_view.html" class="kic_list_link">
-                                    <div class="col num">
-                                        999
-                                    </div>
-                                    <div class="col tit">
-                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
-                                        <i class="ico_attach"></i><!--첨부파일 있을 경우-->
-                                    </div>
-                                    <div class="col date col_bot">2023-11-22</div>
-                                    <div class="col view col_bot">1,056</div>
-                                </a>
-                            </li>
-                            <li class="kic_list_item">
-                                <a href="notice_view.html" class="kic_list_link">
-                                    <div class="col num">
-                                        997
-                                    </div>
-                                    <div class="col tit">
-                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
-                                    </div>
-                                    <div class="col date col_bot">2023-11-22</div>
-                                    <div class="col view col_bot">1,056</div>
-                                </a>
-                            </li>
-                            <li class="kic_list_item">
-                                <a href="notice_view.html" class="kic_list_link">
-                                    <div class="col num">
-                                        997
-                                    </div>
-                                    <div class="col tit">
-                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
-                                    </div>
-                                    <div class="col date col_bot">2023-11-22</div>
-                                    <div class="col view col_bot">1,056</div>
-                                </a>
-                            </li>
-                        </ul>
+                        <table class="contact_info">
+                            <caption>부서별 연락처 정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th>고객지원본부</th>
+                                    <td>
+                                        <div class="contact_info_set">
+                                            <dl class="contact_info_item">
+                                                <dt>고객지원팀</dt>
+                                                <dd>02-6359-1954</dd>
+                                            </dl>
+                                            <dl class="contact_info_item">
+                                                <dt>기술영업팀</dt>
+                                                <dd>02-858-3369</dd>
+                                            </dl>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>경영관리팀</th>
+                                    <td>
+                                        <div class="contact_info_set">
+                                            <dl class="contact_info_item">
+                                                <dt>경영관리팀</dt>
+                                                <dd>02-839-9885</dd>
+                                            </dl>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>교정기술본부</th>
+                                    <td>
+                                        <div class="contact_info_set">
+                                            <dl class="contact_info_item">
+                                                <dt>전기표준팀</dt>
+                                                <dd>02-6359-1909</dd>
+                                            </dl>
+                                            <dl class="contact_info_item">
+                                                <dt>온도표준팀</dt>
+                                                <dd>02-6359-1910</dd>
+                                            </dl>
+                                            <dl class="contact_info_item">
+                                                <dt>역학표준팀</dt>
+                                                <dd>02-6359-1921</dd>
+                                            </dl>
+                                            <dl class="contact_info_item">
+                                                <dt>길이표준팀</dt>
+                                                <dd>02-6359-1929</dd>
+                                            </dl>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="paging_wrap">
-                        <a href="" class="paging_btn ty_first"><span class="blind">처음</span></a>
-                        <a href="" class="paging_btn ty_prev"><span class="blind">이전</span></a>
-                        <ul class="paging_list">
-                            <li><span class="paging_btn current">1</span></li>
-                            <li><a href="" class="paging_btn">2</a></li>
-                            <li><a href="" class="paging_btn">3</a></li>
-                            <li><a href="" class="paging_btn">4</a></li>
-                            <li><a href="" class="paging_btn">5</a></li>
-                        </ul>
-                        <a href="" class="paging_btn ty_next"><span class="blind">다음</span></a>
-                        <a href="" class="paging_btn ty_last"><span class="blind">마지막</span></a>
+                    <div class="tab_cont">
+                        <div class="sub_sec_tit">
+                            <h3 class="tit">부산지사</h3>
+                        </div>
+                        <table class="contact_info">
+                            <caption>부서별 연락처 정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th>고객지원팀</th>
+                                    <td>
+                                        <div class="contact_info_set">
+                                            <dl class="contact_info_item">
+                                                <dt>고객지원팀</dt>
+                                                <dd>051-322-0880</dd>
+                                            </dl>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>교정기술팀</th>
+                                    <td>
+                                        <div class="contact_info_set">
+                                            <dl class="contact_info_item">
+                                                <dt>교정기술팀</dt>
+                                                <dd>070-4725-3662</dd>
+                                            </dl>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab_cont">
+                        <div class="sub_sec_tit">
+                            <h3 class="tit">대전지사</h3>
+                        </div>
+                        <table class="contact_info">
+                            <caption>부서별 연락처 정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th>고객지원팀</th>
+                                    <td>
+                                        <div class="contact_info_set">
+                                            <dl class="contact_info_item">
+                                                <dt>고객지원팀</dt>
+                                                <dd>042-931-1901</dd>
+                                            </dl>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>교정기술팀</th>
+                                    <td>
+                                        <div class="contact_info_set">
+                                            <dl class="contact_info_item">
+                                                <dt>교정기술팀</dt>
+                                                <dd>070-4211-6231</dd>
+                                            </dl>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="sub_sec">
+                    <div class="sub_sec_tit">
+                        <h3 class="tit">궁금하신 사항이 있으세요?</h3>
+                        <p class="write_msg"><span>*</span> 답변은 입력하신 연락처 또는 이메일로 드릴 예정이므로 정확하게 입력 바랍니다. </p>
+                    </div>
+                    <div class="board_write">
+                        <div class="board_write_cont">
+                            <div class="board_write_item">
+                                <label for="" class="col_tit">회사명 <span class="ico_required">*</span></label> <!-- [D] 필수일 경우 <span class="ico_required"></span> 추가 -->
+                                <div class="col_cont">
+                                    <input type="text" class="f_input" placeholder="회사명을 입력해주세요." required>
+                                </div>
+                            </div>
+                            <div class="board_write_item">
+                                <label for="" class="col_tit">담당자명 <span class="ico_required">*</span></label>
+                                <div class="col_cont">
+                                    <input type="text" class="f_input" placeholder="담당자 명을 입력해주세요" required>
+                                </div>
+                            </div>
+                            <div class="board_write_item">
+                                <label for="" class="col_tit">연락처 <span class="ico_required">*</span></label>
+                                <div class="col_cont">
+                                    <input type="tel" class="f_input" placeholder="연락처를 입력해주세요.">
+                                </div>
+                            </div>
+                            <div class="board_write_item">
+                                <label for="" class="col_tit">이메일 <span class="ico_required">*</span></label>
+                                <div class="col_cont">
+                                    <input type="email" class="f_input" placeholder="이메일을 입력해주세요.">
+                                </div>
+                            </div>
+                            <div class="board_write_item ">
+                                <label for="" class="col_tit">제목 <span class="ico_required">*</span></label>
+                                <div class="col_cont">
+                                    <input type="text" class="f_input w100" placeholder="제목을 입력해주세요.">
+                                </div>
+                            </div>
+                            <div class="board_write_item">
+                                <label for="" class="col_tit">내용 <span class="ico_required">*</span></label>
+                                <div class="col_cont">
+                                    <textarea name="" id="" class="f_textarea" placeholder="내용을 입력해주세요."></textarea>
+                                </div>
+                            </div>
+                            <div class="board_write_item">
+                                <label for="" class="col_tit">자동등록 방지 <span class="ico_required">*</span></label>
+                                <div class="col_cont">
+                                    <div class="capcha_set">
+                                        <div class="capcha_set_img"><img src="../assets/images/common/capcha_sample.png" alt=""></div>
+                                        <button type="button" class="capcha_set_refresh"></button>
+                                        <input type="text" class="f_input" placeholder="자동등록방지 텍스트 입력">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="board_write_item">
+                                <label for="" class="col_tit">첨부파일</label>
+                                <div class="col_cont">
+                                    <div class="file_wrap">
+                                        <div class="file_set">
+                                            <div class="file_box">
+                                                <input type="file" class="f_hidden" onchange="select_file(this)">
+                                                <input type="text" class="f_input" placeholder="파일을 선택해주세요." onclick=" open_file(this)" readonly>
+                                                <button class="btn_del" onclick=" del_file(this)"><span class="blind">파일삭제</span></button>
+                                            </div>
+                                            <button class="btn_add" onclick="add_form(5) //add_form(최대값)"><span class="blind">행 추가</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_area taC ty_bot">
+                            <input type="submit" class="f_btn ty_big bg_blue" value="문의"></input>
+                            <button type="button" class="f_btn ty_big line_black">취소</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -77,6 +77,7 @@
     .col {
         text-align: center;
         padding: 0 10px;
+        order: 2;
         @include mobile { 
             padding: 0;
         }
@@ -112,13 +113,48 @@
         }
         &.num {
             width: 50px;
-            @include mobile { 
+            @include tablet { 
                 display: none;
+            }
+        }
+        &.cate {
+            width: 80px;
+            @include mobile { 
+                width: auto;
+                padding: 0;
+                flex-shrink: 0;
+                font-size: 13px;
+                margin-bottom: 2px;
+                color: #999;
+                &::before {
+                    content: '[';
+                }
+                &::after {
+                    content: ']';
+                }
             }
         }
         &.date {
             width: 85px;
             flex-shrink: 0;
+            @include mobile {
+                &.ty_answer {
+                    order: 1;
+                    margin-top: 0;
+                    &::before {
+                        content:'';
+                        display: inline-block;
+                        vertical-align: top;
+                        
+                        width: 1px;
+                        height: 12px;
+                        background-color: #d9d9d9;
+                        margin: 0 7px;
+                        margin-top: 4px;
+    
+                    }
+                }
+            }
         }
         &.view {
             width: 70px;
@@ -133,22 +169,19 @@
                 color: blue;
             }
             @include mobile { 
-                width: 100%;
+                width: auto;
                 text-align: left;
-                margin-bottom: 2px;
+                
                 font-size: 13px;
                 font-weight: bold;
+                order: 0;
             }
         }
         &.writer {
             width: 120px;
             flex-shrink: 0;
         }
-        &.date_answer {
-            width: 100px;
-            flex-shrink: 0;
-            order: 1;
-        }
+        
         &.col_bot {
             @include mobile { 
                 position: relative;
@@ -157,6 +190,11 @@
                 line-height: 1.6;
                 color: #666;
                 margin-top: 4px;
+                &.date {
+                    &::after {
+                        display: none;
+                    }
+                }
                 &::after {
                     content:'';
                     display: inline-block;

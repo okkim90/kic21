@@ -12,7 +12,7 @@
     <!--// style -->
 
      <!-- js -->
-     <script defer src="../assets/js/jquery-3.1.1.min.js"></script>
+     <script src="../assets/js/jquery-3.1.1.min.js"></script>
      <script defer src="../assets/js/swiper.min.js"></script>
      <script defer src="../assets/js/scrollAni.js"></script>
      <script defer src="../assets/js/header.js"></script>
@@ -201,11 +201,12 @@
         <div class="sub_nav">
             <div class="sub_nav_toggle"></div>
             <ul class="sub_nav_list">
-                <li class="sub_nav_item"><a href="">공지사항</a></li>
-                <li class="sub_nav_item on"><a href="">Q&A</a></li>
-                <li class="sub_nav_item"><a href="">자료실</a></li>
-                <li class="sub_nav_item"><a href="">관련기관</a></li>
-                <li class="sub_nav_item"><a href="">Contact us</a></li>
+                <!-- [D] 현재페이지 활성화 on class -->
+                <li class="sub_nav_item"><a href="notice_list.html">공지사항</a></li>
+                <li class="sub_nav_item on"><a href="qna_list.html">Q&A</a></li>
+                <li class="sub_nav_item"><a href="reference_list.html">자료실</a></li>
+                <li class="sub_nav_item"><a href="related.html">관련기관</a></li>
+                <li class="sub_nav_item"><a href="contact.html">Contact us</a></li>
             </ul>
             <script>
                 let sub_nav = document.querySelector('.sub_nav');
@@ -359,7 +360,7 @@
                     <!-- // Q&A 답변에 대한 댓글 영역  -->
                 </div>
                 <div class="btn_area taC ty_bot">
-                    <a href="" class="f_btn ty_big bg_blue">수정</a>
+                    <a href="./qna_edit.html" class="f_btn ty_big bg_blue">수정</a>
                     <a href="./qna_list.html" class="f_btn ty_big line_black">목록</a>
                 </div>
             </div>

@@ -202,9 +202,9 @@
             <div class="sub_nav_toggle"></div>
             <ul class="sub_nav_list">
                 <!-- [D] 현재페이지 활성화 on class -->
-                <li class="sub_nav_item on"><a href="notice_list.html">공지사항</a></li>
+                <li class="sub_nav_item"><a href="notice_list.html">공지사항</a></li>
                 <li class="sub_nav_item"><a href="qna_list.html">Q&A</a></li>
-                <li class="sub_nav_item"><a href="reference_list.html">자료실</a></li>
+                <li class="sub_nav_item on"><a href="reference_list.html">자료실</a></li>
                 <li class="sub_nav_item"><a href="related.html">관련기관</a></li>
                 <li class="sub_nav_item"><a href="contact.html">Contact us</a></li>
             </ul>
@@ -256,7 +256,14 @@
         <div class="sub_wrap">
             <div class="inner">
                 <div class="sub_tit">
-                    <h2 class="tit">공지사항</h2>
+                    <h2 class="tit">자료실</h2>
+                </div>
+                <div class="sub_tab">
+                    <ul class="sub_tab_list">
+                        <li class="sub_tab_item on"><a href="" class="sub_tab_link">전체</a></li>
+                        <li class="sub_tab_item"><a href="" class="sub_tab_link">기술지원</a></li>
+                        <li class="sub_tab_item"><a href="" class="sub_tab_link">일반자료</a></li>
+                    </ul>
                 </div>
                 <form action="" class="search_form">
                     <select name="" id="" class="search_form_select">
@@ -277,43 +284,20 @@
                     <div class="kic_list">
                         <div class="kic_list_head">
                             <div class="col num">번호</div>
+                            <div class="col cate">구분</div>
                             <div class="col tit">제목</div>
                             <div class="col date">작성일자</div>
                             <div class="col view">조회</div>
                         </div>
                         <ul class="kic_list_body">
-                            <!--[DEV] .kic_list_item 공지일 경우 .ty_notice 클래스 추가 -->
-                            <li class="kic_list_item ty_notice">
-                                <a href="notice_view.html" class="kic_list_link">
-                                    <div class="col num">
-                                        <i class="ico_notice">공지</i>
-                                    </div>
-                                    <div class="col tit">
-                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목  제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
-                                        <i class="ico_attach"></i><!--첨부파일 있을 경우-->
-                                    </div>
-                                    <div class="col date col_bot">2023-11-22</div>
-                                    <div class="col view col_bot">1,056</div>
-                                </a>
-                            </li>
-                            <li class="kic_list_item ty_notice">
-                                <a href="notice_view.html" class="kic_list_link">
-                                    <div class="col num">
-                                        <i class="ico_notice">공지</i>
-                                    </div>
-                                    <div class="col tit">
-                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
-                                        <i class="ico_attach"></i><!--첨부파일 있을 경우-->
-                                    </div>
-                                    <div class="col date col_bot">2023-11-22</div>
-                                    <div class="col view col_bot">1,056</div>
-                                </a>
-                            </li>
                             <li class="kic_list_item">
-                                <a href="notice_view.html" class="kic_list_link">
+                                <a href="reference_view.html" class="kic_list_link">
                                     <div class="col num">
                                         999
                                     </div>
+                                    <div class="col cate">
+                                        기술지원
+                                    </div>
                                     <div class="col tit">
                                         <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
                                         <i class="ico_attach"></i><!--첨부파일 있을 경우-->
@@ -323,21 +307,76 @@
                                 </a>
                             </li>
                             <li class="kic_list_item">
-                                <a href="notice_view.html" class="kic_list_link">
+                                <a href="reference_view.html" class="kic_list_link">
                                     <div class="col num">
-                                        997
+                                        999
+                                    </div>
+                                    <div class="col cate">
+                                        기술지원
                                     </div>
                                     <div class="col tit">
                                         <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
+                                        <i class="ico_attach"></i><!--첨부파일 있을 경우-->
                                     </div>
                                     <div class="col date col_bot">2023-11-22</div>
                                     <div class="col view col_bot">1,056</div>
                                 </a>
                             </li>
                             <li class="kic_list_item">
-                                <a href="notice_view.html" class="kic_list_link">
+                                <a href="reference_view.html" class="kic_list_link">
+                                    <div class="col num">
+                                        999
+                                    </div>
+                                    <div class="col cate">
+                                        기술지원
+                                    </div>
+                                    <div class="col tit">
+                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
+                                        <i class="ico_attach"></i><!--첨부파일 있을 경우-->
+                                    </div>
+                                    <div class="col date col_bot">2023-11-22</div>
+                                    <div class="col view col_bot">1,056</div>
+                                </a>
+                            </li>
+                            <li class="kic_list_item">
+                                <a href="reference_view.html" class="kic_list_link">
+                                    <div class="col num">
+                                        999
+                                    </div>
+                                    <div class="col cate">
+                                        일반자료
+                                    </div>
+                                    <div class="col tit">
+                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
+                                        <i class="ico_attach"></i><!--첨부파일 있을 경우-->
+                                    </div>
+                                    <div class="col date col_bot">2023-11-22</div>
+                                    <div class="col view col_bot">1,056</div>
+                                </a>
+                            </li>
+                            <li class="kic_list_item">
+                                <a href="reference_view.html" class="kic_list_link">
                                     <div class="col num">
                                         997
+                                    </div>
+                                    <div class="col cate">
+                                        일반자료
+                                    </div>
+                                    <div class="col tit">
+                                        <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
+                                        <i class="ico_attach"></i><!--첨부파일 있을 경우-->
+                                    </div>
+                                    <div class="col date col_bot">2023-11-22</div>
+                                    <div class="col view col_bot">1,056</div>
+                                </a>
+                            </li>
+                            <li class="kic_list_item">
+                                <a href="reference_view.html" class="kic_list_link">
+                                    <div class="col num">
+                                        997
+                                    </div>
+                                    <div class="col cate">
+                                        일반자료
                                     </div>
                                     <div class="col tit">
                                         <span class="txt">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span>
