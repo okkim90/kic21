@@ -139,6 +139,9 @@ input[type="submit"],
 input[type="file"]
 {
     cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     border-radius: 0 !important;
 }
 // input[type="text"],
