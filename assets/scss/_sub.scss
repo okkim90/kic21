@@ -2,6 +2,10 @@
 .posR {
     position: relative;
 }
+.inner2 {
+    max-width: 1060px;
+    margin: 0 auto;
+}
 
 .right_nav {
     position: absolute;
@@ -107,6 +111,9 @@
     }
     &.sub_cs {
         background-image: url(../images/sub/sub_visual_cs.jpg);
+    }
+    &.sub_support {
+        background-image: url(../images/sub/sub_visual_support.jpg);
     }
 
     @include mobile { 
@@ -257,123 +264,30 @@
     }
 }
 
-.f_input {
-    width: 100%;
-    max-width: 600px;
-    &.w100 {
-        max-width: 100%;
-    }
-    height: 60px;
-    padding: 0 30px;
-    border: 1px solid #d9d9d9;
-    box-sizing: border-box;
-    font-size: 18px;
-    &[type='password']{
-        font-family: 'Verdana';
-    }
-    // &.readonly {
-    //     background-color: #f6f7fa;
-    //     color: #999;
-    // }
 
-    @include mobile {
-        font-size: 13px;
-        padding: 0 10px;
-        height: 40px;
-    }
-}
-.f_select {
-    width: 100%;
-    max-width: 600px;
-    &.w100 {
-        max-width: 100%;
-    }
-    height: 60px;
-    padding: 0 30px;
-    padding-right: 60px;
-    border: 1px solid #d9d9d9;
-    box-sizing: border-box;
-    font-size: 18px;
-    @include mobile {
-        font-size: 13px;
-        padding: 0 10px;
-        padding-right: 30px;
-        height: 40px;
-    }
-}
-.f_textarea {
-    width: 100%;
-    height: 300px;
-    padding: 19px 30px;
-    border: 1px solid #d9d9d9;
-    box-sizing: border-box;
-    font-size: 18px;
-    line-height: 1.5;
-    @include mobile {
-        font-size: 13px;
-        padding: 10px;
-        height: 100px;
-    }
-}
-.f_btn {
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
+.btn_down {
+    display: flex;
+    align-items: center;
     width: 180px;
     max-width: 100%;
-    padding: 0 20px;
+    padding: 0 10px;
+    border-bottom: 1px solid #222;
     font-size: 18px;
-    height: 60px;
-    background-color: #555;
-    border: 1px solid transparent;
-    box-sizing: border-box;
-    color: #fff;
-    line-height: 58px;
-    @include mobile {
+    line-height: 50px;
+    justify-content: space-between;
+    &::after {
+        content:'';
+        width: 22px;
+        height: 22px;
+        background: url(../images/common/icon_down_black.svg) no-repeat center center;
+    }
+    @include mobile { 
+        font-size: 13px;
+        line-height: 35px;
         width: 120px;
-        height: 40px;
-        line-height: 38px;
-        font-size: 14px;
-    }
-    &.ty_big {
-        width: 250px;
-        max-width: 100%;
-        height: 70px;
-        line-height: 68px;
-        font-size: 20px;
-
-        @include mobile {
-            max-width: 150px;
-            height: 45px;
-            line-height: 43px;
-            font-size: 14px;
-        }
-
-
-    }
-    &.bg_blue {
-        background-color: #1f2085;
-        color: #fff;
-    }
-    &.bg_grey {
-        background-color: #555;
-        color: #fff;
-    }
-    &.line_blue {
-        color: #222;
-        background-color: #fff;
-        border-color: #1f2085;
-    }
-    &.line_black {
-        color: #222;
-        background-color: #fff;
+        border-radius: 4px;
         border: 1px solid #222;
-        transition: all .12s ease-in-out;
-        &:hover {
-            background-color: #555;
-            border-color: #555;
-            color: #fff;
-        }
+      
     }
 }
 
@@ -489,6 +403,7 @@
             font-weight: bold;
             @include mobile {
                 font-size: 20px;
+                align-self: flex-end;
             }
         }
         
@@ -503,6 +418,28 @@
             @include mobile {
                 font-size: 13px;
                 margin-top: 4px;
+                justify-self: flex-end;
+            }
+        }
+        .download_btns {
+            display: flex;
+            margin: 0 -15px;
+            align-self: flex-end;
+            & ~ .write_msg {
+                order: -1;
+            }
+            @include mobile {
+                margin: 0 -5px;
+                max-width: calc(100% + 10px);
+                justify-content: flex-end;
+                margin-top: 10px;
+                
+            }
+            .btn_down {
+                margin: 0 15px;
+                @include mobile { 
+                    margin: 0 5px;
+                }
             }
         }
 
@@ -811,3 +748,98 @@
     }
 }
 
+
+
+.step_list {
+    &_item {
+        display: flex;
+        align-items: center;
+        border: 1px solid $CLine;
+        border-radius: 20px;
+        padding: 40px 85px;
+        background-color: #f6f7fa;
+        @include mobile {
+            padding: 20px;
+            border-radius: 10px;
+        }
+        & + & {
+            margin-top: 30px;
+            @include mobile { 
+                margin-top: 20px;
+            }
+        }
+
+        .icon_box {
+            width: 160px;
+            height: 160px;
+            flex-shrink: 0;
+            border: 1px solid #ebecee;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            img {
+                height: 80px;
+                width: auto;
+            }
+            @include mobile { 
+                display: none;
+                width: 80px;
+                height: 80px;
+
+                img {
+                    height: 40px;
+                }
+            }
+        }
+        .txt_box {
+            flex: 1;
+            min-width: 0;
+            padding-left: 50px;
+            box-sizing: border-box;
+            @include mobile { 
+                padding-left: 0;
+
+            }
+            .tit {
+                font-weight: bold;
+                color: $CBrand;
+                font-size: 30px;
+                @include mobile { 
+                    font-size: 16px;
+                }
+            }
+            .desc {
+                font-size: 18px;
+                line-height: 1.7;
+                margin-top: 1em;
+                @include mobile { 
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+                &_tit {
+                    font-weight: bold;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                &_ol {
+                    list-style: decimal;
+                    list-style-position: inside;
+                    text-indent: -1em;
+                    padding-left: 1em;
+                    
+                }
+                &_s {
+                    font-size: 16px;
+                    color: #555;
+                    margin-top: 2px;
+                    @include mobile { 
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
