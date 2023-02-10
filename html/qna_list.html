@@ -490,5 +490,26 @@
             </div>
         </div>  
     </footer>
+
+    <div class="layer_popup on"> <!-- [D] 활성화 : 'on' 클래스  -->
+        <div class="layer_popup_container">
+            <div class="layer_popup_area">
+                <div class="layer_popup_tit">
+                    <h3 class="tit">비밀번호</h3>
+                    <button type="button" class="close_popup" onclick="close_popup(this);"><span class="blind">팝업닫기</span></button>
+                </div> 
+                <div class="layer_popup_cont ty_pw">
+                    <p class="txt">고객님의 정보를 안전하게 보호하기 위해 <br> 비밀번호를 입력해주세요.</p>
+                    <div class="form_set">
+                        <input type="password" class="f_input" placeholder="비밀번호를 입력해주세요.">
+                    </div>
+                    <div class="btn_area taC">
+                        <input type="submit" class="f_btn bg_blue" value="확인">
+                        <button type="button" class="f_btn line_black"  onclick="close_popup(this);">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

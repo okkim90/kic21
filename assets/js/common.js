@@ -10,3 +10,10 @@ $(window).on('load scroll',function(){
         r_nav.removeClass('on');
     }
 });
+
+
+function close_popup(target){
+    let $this = $(target);
+    let $layer_popup = $this.parents('.layer_popup');
+    $layer_popup.removeClass('on');
+}

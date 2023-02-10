@@ -149,7 +149,6 @@
             top: 50px;
             width: 100%;
             background-color: #fff;
-            z-index: -1;
             box-shadow: 5px 5px 10px rgba(#000,.2);
             user-select: none;
             @at-root .sub_nav.on & {
@@ -320,8 +319,8 @@
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    min-width: 180px;
-
+    width: 180px;
+    max-width: 100%;
     padding: 0 20px;
     font-size: 18px;
     height: 60px;
@@ -331,14 +330,14 @@
     color: #fff;
     line-height: 58px;
     @include mobile {
-        min-width: 120px;
+        width: 120px;
         height: 40px;
         line-height: 38px;
         font-size: 14px;
     }
     &.ty_big {
         width: 250px;
-        -width: 100%;
+        max-width: 100%;
         height: 70px;
         line-height: 68px;
         font-size: 20px;
