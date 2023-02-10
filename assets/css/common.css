@@ -3913,11 +3913,11 @@ input::-webkit-search-results-decoration {
     margin-top: 10px;
   }
 }
-.sub_sec_tit .download_btns .btn_down {
+.sub_sec_tit .download_btns .btn_download {
   margin: 0 15px;
 }
 @media (max-width: 767px) {
-  .sub_sec_tit .download_btns .btn_down {
+  .sub_sec_tit .download_btns .btn_download {
     margin: 0 5px;
   }
 }
