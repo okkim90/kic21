@@ -3725,7 +3725,7 @@ input::-webkit-search-results-decoration {
   }
 }
 
-.btn_down {
+.btn_download {
   display: flex;
   align-items: center;
   width: 180px;
@@ -3736,14 +3736,14 @@ input::-webkit-search-results-decoration {
   line-height: 50px;
   justify-content: space-between;
 }
-.btn_down::after {
+.btn_download::after {
   content: "";
   width: 22px;
   height: 22px;
   background: url(../images/common/icon_down_black.svg) no-repeat center center;
 }
 @media (max-width: 767px) {
-  .btn_down {
+  .btn_download {
     font-size: 13px;
     line-height: 35px;
     width: 120px;
