@@ -4,10 +4,9 @@
     font-size: 16px;
     line-height: 1.6 ;
     
-
-
     &_tit {
         display: flex;
+        flex-wrap: wrap;
         min-height: 99px;
         align-items: center;
         box-sizing: border-box;
@@ -15,21 +14,48 @@
         line-height: 1.6;
         padding: 20px;
         border-bottom: 1px solid $CLine;
-
+        @include mobile { 
+            .tit {
+                width: 100%;
+                margin-top: 5px;
+            }
+        }
+        
+        .status {
+            padding: 0 10px;
+            background-color: #999;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            line-height: 30px;
+            color: #fff;
+            margin-right: 10px;
+            @include mobile {
+                font-size: 13px;
+                line-height: 22px;
+            }
+            &.on {
+                background-color: $CBrand;
+            }
+       }
         @include mobile {
             padding: 15px 0;
             min-height: 60px;
             font-size: 18px;
         }
+
     }
     &_info {
         display: flex;
         justify-content: flex-end;
         color: #999;
-        padding: 20px;
+        width: 100%;
+        font-size: 16px;
+        margin-top: 10px;
+        font-weight: normal;
         @include mobile {
             font-size: 13px;
-            padding: 10px 0;
+            
             letter-spacing: -0.7px;
         }
         &_item {
@@ -59,12 +85,59 @@
             }   
         }
     }
+    &_option {
+        padding:  20px;
+        font-size: 18px;
+        line-height: 1.7;
+        border-bottom: 1px solid $CLine;
+        @include mobile {
+            padding: 12px 0;
+            font-size: 13px;
+        }
+    }
+    &_writer {
+        display: flex;
+        flex-wrap: wrap;
+        .item {
+            display: flex;
+            align-items: center;
+            @include mobile {
+                &.ty_company {
+                    width: 100%;
+                    font-size: 14px;
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+            &::after {
+                content:'';
+                width: 1px;
+                height: 16px;
+                margin: 0 10px;
+                background-color: $CLine;
+                @include mobile {
+                    height: 12px;
+                    margin: 0 5px;
+                }
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    &_branch {
+        margin-top: 10px;
+        color: #999;
+    }
     &_cont {
         border-bottom: 1px solid $CLine;
-        padding: 20px 20px 40px;
+        padding: 30px 20px 40px;
         @include mobile {
             font-size: 14px;
-            padding: 10px 0 30px;
+            padding: 20px 0 30px;
         }
     }
     &_file {
