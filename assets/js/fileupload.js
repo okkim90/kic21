@@ -22,9 +22,11 @@ function del_file(target){
     let $input_file = $file_box.find('.f_hidden');
     let $input_txt = $file_box.find('.f_input');
     $file_box.removeClass('hasFile');
-    //$input_file.val(null);
+    $input_file.val(null);
     $input_txt.val(null);
-    console.log($input_file.val())
+    console.log($input_file.val());
+
+
 }
 
 function add_form(max){

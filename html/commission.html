@@ -184,7 +184,7 @@
     </header>
     
     <main id="container" class="container">
-        <div class="sub_visual sub_cs">
+        <div class="sub_visual sub_support">
             <!--[DEV] .sub_visual (서브 상단 비주얼)
                 회사소개: sub_company
                 교정안내: sub_business
@@ -193,8 +193,8 @@
                 고객지원: sub_cs
             -->
             <div class="txt_box">
-                <h2 class="tit">고객지원</h2>
-                <p class="desc">더 나은 서비스를 제공하기 위해 최선을 다하겠습니다.</p>
+                <h2 class="tit">교정절차</h2>
+                <p class="desc">오랜 경험과 노하우를 바탕으로 언제나 최고의 교정 서비스를 제공합니다.</p>
             </div>
         </div>
         <!-- sub 공통 dep2 nav-->
@@ -202,11 +202,11 @@
             <div class="sub_nav_toggle"></div>
             <ul class="sub_nav_list">
                 <!-- [D] 현재페이지 활성화 on class -->
-                <li class="sub_nav_item"><a href="notice_list.html">공지사항</a></li>
-                <li class="sub_nav_item on"><a href="qna_list.html">Q&A</a></li>
-                <li class="sub_nav_item"><a href="reference_list.html">자료실</a></li>
-                <li class="sub_nav_item"><a href="related.html">관련기관</a></li>
-                <li class="sub_nav_item"><a href="contact.html">Contact us</a></li>
+                <li class="sub_nav_item "><a href="">신청절차</a></li>
+                <li class="sub_nav_item "><a href="">견적요청</a></li>
+                <li class="sub_nav_item "><a href="">인정분야</a></li>
+                <li class="sub_nav_item "><a href="">교정단가조회</a></li>
+                <li class="sub_nav_item on"><a href="">교정수수료</a></li>
             </ul>
             <script>
                 let sub_nav = document.querySelector('.sub_nav');
@@ -253,134 +253,102 @@
             </div>
         </div>
 
-        <div class="sub_wrap">
+        <div id="sub_wrap" class="sub_wrap">
             <div class="inner">
                 <div class="sub_tit">
-                    <h2 class="tit">Q&A</h2>
+                    <h2 class="tit">교정수수료</h2>
                 </div>
-                
-                <div class="board_view">
-                    <div class="board_view_tit">
-                        <!-- 답변완료 상태-->
-                        <span class="status on">답변완료</span>
-                        <!-- 미답변 상태-->
-                        <span class="status">답변대기</span>
-                        <div class="tit">
-                            [교정지연] 진원도 측정기 교정불가안내
-                        </div>
-                        <ul class="board_view_info">
-                            <li class="board_view_info_item">등록일시 : 2023-01-10 13:25:11 </li>
-                            <li class="board_view_info_item">조회수 : 1,236</li>
-                        </ul>
+                <div class="sub_sec">
+                    <div class="sub_sec_tit ty2">
+                        <h2 class="tit">교정수수료 상세내역</h2>
                     </div>
-                    <div class="board_view_option">
-                        <div class="board_view_writer">
-                            <strong class="item ty_company">구로상선</strong>
-                            <span class="item">홍길동</span>
-                            <span class="item">02-1234-1234</span>
-                            <span class="item">guro@goro.com</span>
-                        </div>
-                        <div class="board_view_branch">
-                            지사선택 : 서울본사
-                        </div>
-                    </div>
-                    <div class="board_view_cont">
-                        2022년 04월 01일부터 한국계량측정협회의 국가교정기관 교정수수료 개정안이 공지되어 안내해드립니다. <br>
-                        상기 인상된 교정수수료에 대해서 당사는 하기일자부터 개정된 교정수수료에 대해서적용될 예정이오니 참고 하시기 바랍니다. <br><br>
-
-                        교정수수료 적용일시 : 2022년 07월 01일(목)<br><br>
-
-                        &gt;교정수수료 개정 안내&lt;<br><br>
-
-                        국가표준기본법 시행령 제18조 제2항 및 KOLAS 공인기관 인정제도 운영요령 제25조 제4항 등 관련 법령에 <br>
-                        의거하여 교정수수료가 다음과 같이 개정됨을 알려 드립니다. <br><br>
-
-                        ○ 개정 내용 <br>
-                        - 공인교정기관 교정수수료 인상(3.5%) <br><br>
-
-                        ○ 시행일자 <br>
-                        - 2022년 7월 1일
-                    </div>
-                    <div class="board_view_file">
-                        <strong class="tit">첨부파일</strong>
-                        <ul class="file_list">
-                            <li><a href="" class="btn_down"><span class="file_name"> Lorem, ipsum dolor sit amet consectetur adipisicing elit?.pdf</span></a></li>
-                            <li><a href="" class="btn_down"><span class="file_name"> 메뉴얼_메뉴얼_메뉴얼_.pdf</span></a></li>
-                            <li><a href="" class="btn_down"><span class="file_name"> 메뉴뉴얼_뉴얼_.pdf</span></a></li>
-                            <li><a href="" class="btn_down"><span class="file_name"> 메뉴얼_메뉴얼_메뉴얼_메뉴얼_메뉴얼뉴얼_메뉴얼_.pdf</span></a></li>
-                        </ul>
-                    </div>
+                    <ul class="commission_list">
+                        <li class="commission_item">
+                            <div class="commission_item_inner">
+                                <a href="../assets/files/comission/국가교정기관용_1. 길이 및 관련량.pdf" target="_blank" class="commission_link">
+                                    <strong class="tit">길이 및 관련량</strong>
+                                    <span class="ico_view">자세히 보기</span>
+                                </a>
+                            </div>
+                            
+                        </li>
+                        <li class="commission_item">
+                            <div class="commission_item_inner">
+                                <a href="../assets/files/comission/국가교정기관용_2. 질량 및 관련량.pdf" target="_blank" class="commission_link">
+                                    <strong class="tit">질량 및 관련량</strong>
+                                    <span class="ico_view">자세히 보기</span>
+                                </a>
+                            </div>
+                            
+                        </li>
+                        <li class="commission_item">
+                            <div class="commission_item_inner">
+                                <a href="../assets/files/comission/국가교정기관용_3. 시간 및 주파수.pdf" target="_blank" class="commission_link">
+                                    <strong class="tit">시간 및 주파수</strong>
+                                    <span class="ico_view">자세히 보기</span>
+                                </a>
+                            </div>
+                            
+                        </li>
+                        <li class="commission_item">
+                            <div class="commission_item_inner">
+                                <a href="../assets/files/comission/국가교정기관용_4. 전기·자기 전자파.pdf" target="_blank" class="commission_link">
+                                    <strong class="tit">전기, 자기, 전자파</strong>
+                                    <span class="ico_view">자세히 보기</span>
+                                </a>
+                            </div>
+                            
+                        </li>
+                        <li class="commission_item">
+                            <div class="commission_item_inner">
+                                <a href="../assets/files/comission/국가교정기관용_5. 온도 및 습도.pdf" target="_blank" class="commission_link">
+                                    <strong class="tit">온도 및 습도</strong>
+                                    <span class="ico_view">자세히 보기</span>
+                                </a>
+                            </div>
+                            
+                        </li>
+                        <li class="commission_item">
+                            <div class="commission_item_inner">
+                                <a href="../assets/files/comission/국가교정기관용_6. 음향 및 진동.pdf" target="_blank" class="commission_link">
+                                    <strong class="tit">음향 및 진동</strong>
+                                    <span class="ico_view">자세히 보기</span>
+                                </a>
+                            </div>
+                            
+                        </li>
+                        <li class="commission_item">
+                            <div class="commission_item_inner">
+                                <a href="../assets/files/comission/국가교정기관용_7. 광량.pdf" target="_blank" class="commission_link">
+                                    <strong class="tit">광량</strong>
+                                    <span class="ico_view">자세히 보기</span>
+                                </a>
+                            </div>
+                            
+                        </li>
+                        <li class="commission_item">
+                            <div class="commission_item_inner">
+                                <a href="../assets/files/comission/국가교정기관용_8. 전리방사선.pdf" target="_blank" class="commission_link">
+                                    <strong class="tit">전리방사선</strong>
+                                    <span class="ico_view">자세히 보기</span>
+                                </a>
+                            </div>
+                            
+                        </li>
+                    </ul>
                 </div>
-                <div class="comment_wrap">
+                <div class="sub_sec">
                     <div class="sub_sec_tit">
-                        <h3 class="tit">문의답변</h3>
+                        <h2 class="tit">교정수수료 상세내역</h2>
+                        <div class="desc ty_right">표준 소급비는 국제·국가측정표준에서 국가교정기관을 거처 산업체에 이르기까지 전 과정을 통하여 표준 소급성을 유지하는데 필요한 비용에 사용되며,  그 혜택은 계량·측정기를 사용하는 산업체 및 시험·검사기관은 물론 최종적으로 모든 국민에게 돌아갑니다.</div>
                     </div>
-                    <!-- Q&A 답변 영역 -->
-                    <!-- <div class="comment_item ty_answer">
-                        <div class="comment_item_top">
-                            <div class="comment_item_writer">
-                                <span class="name">관리자</span>  
-                                <span class="time">2023-01-10 13:52:20</span> 
-                            </div>
-                        </div>
-                        <div class="comment_item_cont">
-                            답변 드립니다. 답변 드립니다. 답변 드립니다.  답변 드립니다. 답변 드립니다. 답변 드립니다. 답변 드립니다. 답변 드립니다. 답변 드립니다. <br> 답변 드립니다. 답변 드립니다. 답변 드립니다. <br><br>
-                            답변 드립니다. 답변 드립니다. 답변 드립니다.
-                        </div>
-                    </div> -->
-                    <!--// Q&A 답변 영역 -->
+                    
 
-                    <!-- Q&A 답변에 대한 댓글 영역 -->
-                    <div class="comment_item_list">
-                        <div class="comment_item">
-                            <div class="comment_item_top">
-                                <div class="comment_item_writer">
-                                    <span class="name">(주)기업이름</span>  
-                                    <span class="time">2023-01-10 13:52:20</span> 
-                                </div>
-                                <button type="button" class="comment_item_del"></button>
-                            </div>
-                            <div class="comment_item_cont">
-                                답변이 이상함 답변이 이상함 답변이 이상함 답변이 이상함 답변이 이상함 답변이 이상함 답변이 이상함 답변이 이상함 답변이 이상함 답변이 이상함 답변이 이상함 답변이 이상함 
-                            </div>
-                        </div>
-                        <div class="comment_item">
-                            <div class="comment_item_top">
-                                <div class="comment_item_writer">
-                                    <span class="name">관리자</span>  
-                                    <span class="time">2023-01-10 13:52:20</span> 
-                                </div>
-                                <button type="button" class="comment_item_del"></button>
-                            </div>
-                            <div class="comment_item_cont">
-                                뭐가 이상한데?  뭐가 이상한데?  뭐가 이상한데?  뭐가 이상한데?  뭐가 이상한데?  뭐가 이상한데?  뭐가 이상한데?  뭐가 이상한데? 
-                            </div>
-                        </div>
-                        <div class="comment_item">
-                            <div class="comment_item_top">
-                                <div class="comment_item_writer">
-                                    <span class="name">(주)기업이름</span>  
-                                    <span class="time">2023-01-10 13:52:20</span> 
-                                </div>
-                                <button type="button" class="comment_item_del"></button>
-                            </div>
-                            <div class="comment_item_cont">
-                                기분탓임 ㅅㄱ
-                            </div>
-                        </div>
-                    </div>
-                    <!--// Q&A 답변에 대한 댓글 영역 -->
-
-                    <!-- Q&A 답변에 대한 댓글 작성 영역 -->
-                    <div class="comment_write">
-                        <textarea name="" id="" class="f_textarea" placeholder="댓글 입력 영역입니다."></textarea>
-                        <button class="f_btn bg_grey">댓글 등록</button>
-                    </div>
-                    <!-- // Q&A 답변에 대한 댓글 영역  -->
                 </div>
-                <div class="btn_area taC ty_bot">
-                    <a href="./qna_edit.html" class="f_btn ty_big bg_blue">수정</a>
-                    <a href="./qna_list.html" class="f_btn ty_big line_black">목록</a>
+                <div class="sub_sec">
+                    <div class="sub_sec_tit">
+                        <h2 class="tit">교정수수료 상세내역</h2>
+                    </div>
                 </div>
             </div>
         </div>

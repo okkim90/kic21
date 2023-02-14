@@ -1695,6 +1695,78 @@ input::-webkit-search-results-decoration {
   }
 }
 
+.commission_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+  margin-top: -40px;
+}
+.commission_list .commission_item {
+  width: 25%;
+  padding: 0 20px;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+.commission_list .commission_item_inner {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+.commission_list .commission_link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.25s ease-out;
+}
+.commission_list .commission_link .tit {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #222;
+  transition: color 0.25s ease-out;
+}
+.commission_list .commission_link .ico_view {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #222;
+  transition: color 0.25s ease-out;
+}
+.commission_list .commission_link .ico_view::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/common/ico_search_s.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: background-image 0.25s ease-out;
+  margin-left: 5px;
+}
+.commission_list .commission_link:hover {
+  background-color: #1f2085;
+  border-color: #1f2085;
+  border-radius: 50%;
+}
+.commission_list .commission_link:hover .tit {
+  color: #fff;
+}
+.commission_list .commission_link:hover .ico_view {
+  color: #fff;
+}
+.commission_list .commission_link:hover .ico_view::after {
+  background-image: url(../images/common/ico_search_s_w.svg);
+}
+
 .board_view {
   border-top: 1px solid #222;
   font-size: 16px;
@@ -2021,33 +2093,15 @@ input::-webkit-search-results-decoration {
 .comment_item {
   border-bottom: 1px solid #dcdcdc;
   padding: 20px;
-  padding-left: 70px;
   position: relative;
-  background-color: #f6f7fa;
+}
+.comment_item:first-child {
+  border-top: 1px solid #222;
 }
 @media (max-width: 767px) {
   .comment_item {
     font-size: 14px;
     padding: 10px;
-    padding-left: 40px;
-  }
-}
-.comment_item::before {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 20px;
-  top: 20px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(../images/common/ico_reply.svg);
-}
-@media (max-width: 767px) {
-  .comment_item::before {
-    background-size: 16px;
-    left: 6px;
-    top: 4px;
   }
 }
 .comment_item_top {
