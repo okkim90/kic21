@@ -4357,6 +4357,12 @@ input::-webkit-search-results-decoration {
   border-right: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 }
+.label_search_item input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
 @media (max-width: 767px) {
   .label_search_item {
     width: 20%;

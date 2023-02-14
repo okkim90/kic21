@@ -685,6 +685,12 @@
     border-left: 1px solid $CLine;
     border-top: 1px solid $CLine;
     &_item {
+        input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
         width: (100%/10);
         box-sizing: border-box;
         text-align: center;
