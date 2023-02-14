@@ -178,13 +178,13 @@ select {
 select::-ms-expand { display: none; }
 
 
-// input[type="radio"],
-// input[type="checkbox"] {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     opacity: 0;
-// }
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+}
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
