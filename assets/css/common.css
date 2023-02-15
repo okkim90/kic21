@@ -1608,7 +1608,7 @@ input::-webkit-search-results-decoration {
     color: #666;
     margin-top: 4px;
   }
-  .kic_list .col.col_bot.date::after {
+  .kic_list .col.col_bot.writer + .col_bot.date::after {
     display: none;
   }
   .kic_list .col.col_bot::after {
@@ -2058,6 +2058,18 @@ input::-webkit-search-results-decoration {
   font-size: 18px;
   font-weight: bold;
   margin-right: 10px;
+}
+.comment_item_writer .name.ty_admin {
+  display: flex;
+  align-items: center;
+}
+.comment_item_writer .name.ty_admin::before {
+  content: "";
+  width: 32px;
+  height: 18px;
+  background: url(../images/common/logo_minimal.svg) no-repeat center center;
+  background-size: contain;
+  margin-right: 5px;
 }
 @media (max-width: 767px) {
   .comment_item_writer .name {

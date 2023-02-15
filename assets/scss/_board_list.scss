@@ -258,7 +258,7 @@
                 line-height: 1.6;
                 color: #666;
                 margin-top: 4px;
-                &.date {
+                &.writer + .col_bot.date {
                     &::after {
                         display: none;
                     }

@@ -349,6 +349,18 @@
                 font-size: 18px;
                 font-weight: bold;
                 margin-right: 10px;
+                &.ty_admin {
+                    display: flex;
+                    align-items: center;
+                    &::before {
+                        content: '';
+                        width: 32px;
+                        height: 18px;
+                        background: url(../images/common/logo_minimal.svg) no-repeat center center;
+                        background-size: contain;
+                        margin-right: 5px;
+                    }
+                }
                 @include mobile {
                     font-size: 14px;
                     display: block;
