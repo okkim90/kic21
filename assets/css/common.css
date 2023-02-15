@@ -1608,10 +1608,7 @@ input::-webkit-search-results-decoration {
     color: #666;
     margin-top: 4px;
   }
-  .kic_list .col.col_bot.writer + .col_bot.date::after {
-    display: none;
-  }
-  .kic_list .col.col_bot::after {
+  .kic_list .col.col_bot ~ .col_bot::before {
     content: "";
     display: inline-block;
     vertical-align: top;
@@ -1620,9 +1617,6 @@ input::-webkit-search-results-decoration {
     background-color: #d9d9d9;
     margin: 0 7px;
     margin-top: 4px;
-  }
-  .kic_list .col.col_bot:last-child::after {
-    display: none;
   }
 }
 .kic_list .ico_notice {
