@@ -337,14 +337,25 @@
                                 <div class="col_cont">
                                     <div class="file_wrap">
                                         <div class="file_set">
-                                            <div class="file_box">
-                                                <input type="file" class="f_hidden" onchange="select_file(this)">
-                                                <input type="text" class="f_input" placeholder="파일을 선택해주세요." onclick=" open_file(this)" readonly>
-                                                <button class="btn_del" onclick=" del_file(this)"><span class="blind">파일삭제</span></button>
+                                            <div class="file_box hasFile" data-val="0">
+                                                <input type="file" name="files[]" class="f_hidden" onchange="select_file(this)">
+                                                <input type="text" class="f_input" placeholder="파일을 선택해주세요." onclick=" open_file(this)" value="- 래드콘_교정신청서_1.xls" readonly>
+                                                <button class="btn_del" onclick=" del_file(this)"><span class="blind">파일삭제</span></button>                             
                                             </div>
-                                            <button class="btn_add" onclick="add_form(5) //add_form(최대값)"><span class="blind">행 추가</span></button>
+                                            <button class="btn_add" onclick="add_form(2) //add_form(최대값)"><span class="blind">행 추가</span></button>
+                                        </div>
+                                        
+                                        <div class="file_set">
+                                            <div class="file_box hasFile" data-val="1">
+                                                <input type="file" name="files[]" class="f_hidden" onchange="select_file(this)">
+                                                <input type="text" class="f_input" placeholder="파일을 선택해주세요." onclick=" open_file(this)" value="- 래드콘_교정신청서_2.xls" readonly>
+                                                <button class="btn_del" onclick=" del_file(this)"><span class="blind">파일삭제</span></button>  
+                                            </div>
+                                            <button class="btn_remove" onclick="del_form(this)"><span class="blind">행 삭제</span></button>
                                         </div>
                                     </div>
+                                    <input type="hidden" name="delete_file[]" value="" class="del_chk0">
+                                    <input type="hidden" name="delete_file[]" value="" class="del_chk1">
                                 </div>
                             </div>
                         </div>

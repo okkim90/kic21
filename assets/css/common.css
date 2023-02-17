@@ -1833,6 +1833,12 @@ input::-webkit-search-results-decoration {
   border-bottom: 1px solid #d9d9d9;
   padding: 30px 20px 40px;
 }
+.board_view_cont img {
+  width: auto;
+}
+.board_view_cont * {
+  max-width: 100% !important;
+}
 @media (max-width: 767px) {
   .board_view_cont {
     font-size: 14px;

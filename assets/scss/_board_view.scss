@@ -135,6 +135,12 @@
     &_cont {
         border-bottom: 1px solid $CLine;
         padding: 30px 20px 40px;
+        img {
+            width: auto;
+        }
+        * {
+            max-width: 100% !important;
+        }
         @include mobile {
             font-size: 14px;
             padding: 20px 0 30px;
