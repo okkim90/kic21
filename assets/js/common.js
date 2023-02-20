@@ -17,3 +17,5 @@ function close_popup(target){
     let $layer_popup = $this.parents('.layer_popup');
     $layer_popup.removeClass('on');
 }
+
+

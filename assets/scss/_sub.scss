@@ -6,6 +6,13 @@
     max-width: 1060px;
     margin: 0 auto;
 }
+.taC {
+    text-align: center;
+}
+img.mw100 {
+    width: auto;
+    max-width: 100%;
+}
 
 .right_nav {
     position: absolute;
@@ -116,6 +123,9 @@
     }
     &.sub_support {
         background-image: url(../images/sub/sub_visual_support.jpg);
+    }
+    &.sub_company {
+        background-image: url(../images/sub/sub_visual_company.jpg);
     }
 
     @include mobile { 
@@ -228,6 +238,10 @@
     position: relative;
     z-index: 99;
     background-color: #fff;
+    padding-bottom: 100px;
+    @include mobile {
+        padding-bottom: 60px;
+    }
 }
 
 
@@ -235,7 +249,7 @@
 
 .sub_tit {
     text-align: center;
-    padding: 150px 0 80px;
+    padding: 120px 0 80px;
     .tit {
         font-size: 50px;
         font-weight: bold; 
@@ -1483,3 +1497,6 @@
     }
 
 }
+
+
+
