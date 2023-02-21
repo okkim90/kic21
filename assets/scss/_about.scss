@@ -497,6 +497,10 @@
             width: auto;
             max-width: 100%;
         }
+
+        @include mobile {
+            height: 350px;
+        }
     }
     &_info {
         margin-top: 90px;

@@ -5878,6 +5878,11 @@ img.mw100 {
   width: auto;
   max-width: 100%;
 }
+@media (max-width: 767px) {
+  .about_map_box {
+    height: 350px;
+  }
+}
 .about_map_info {
   margin-top: 90px;
 }
