@@ -255,13 +255,151 @@
                 </nav>
             </div>
         </div>
-
+        
         <div class="sub_wrap">
             <div class="inner">
                 <div class="sub_tit">
                     <h2 class="tit">찾아오시는 길</h2>
                 </div>
-                <div id="map" style="width: 100%;height: 300px;"></div>
+                <div class="sub_tab">
+                    <ul class="sub_tab_list">
+                        <li class="sub_tab_item on"><a href="" class="sub_tab_link no_link" onclick="panTo(0)">서울본사</a></li>
+                        <li class="sub_tab_item"><a href="" class="sub_tab_link no_link" onclick="panTo(1)">부산지사</a></li>
+                        <li class="sub_tab_item"><a href="" class="sub_tab_link no_link" onclick="panTo(2)">대전지사</a></li>
+                        <li class="sub_tab_item"><a href="" class="sub_tab_link no_link" onclick="panTo(3)">지안힐링라운지</a></li>
+                    </ul>
+                    <script>
+                        $('.sub_tab_link.no_link').on('click',function(e){
+                            e.preventDefault();
+                            let $li = $(this).parents('.sub_tab_item');
+                            let $idx = $li.index();
+                            let $tabCont = $('.tab_cont_wrap').find('.tab_cont');
+                            //console.log($idx);
+                            $li.addClass('on').siblings('.sub_tab_item').removeClass('on');
+                            $tabCont.removeClass('on');
+                            $tabCont.eq($idx).addClass('on');
+                        });
+                    </script>
+                </div>
+                
+                <div id="map" class="about_map_box"></div>
+                <div class="about_map_info">
+                    <div class="sub_sec_tit">
+                        <h2 class="tit">위치안내</h2>
+                    </div>
+                    <div class="tab_cont_wrap">
+                        <div class="tab_cont on">
+                            <table class="contact_info">
+                                <caption>부서별 연락처 정보</caption>
+                                <tbody>
+                                    <tr>
+                                        <th>Address</th>
+                                        <td>
+                                            서울 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tel</th>
+                                        <td>
+                                            1600-4245
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Fax</th>
+                                        <td>
+                                            02-863-1905
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>자차 이용 시</th>
+                                        <td>
+                                            남부순환도로 시흥IC에서 김포공항 방면으로 100m 직진 <br> 남부순환도로 사당방면으로 시흥IC 100m 이전 맞은편
+                                            <p class="tip_s"> 주차타워는 승용차에 한하여 이용 가능</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab_cont">
+                            <table class="contact_info">
+                                <caption>부서별 연락처 정보</caption>
+                                <tbody>
+                                    <tr>
+                                        <th>Address</th>
+                                        <td>
+                                            부산 사상구 광장로 56번길 45 (괘법동)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tel</th>
+                                        <td>
+                                            051-322-0880
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Fax</th>
+                                        <td>
+                                            051-322-4066
+                                        </td>
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab_cont">
+                            <table class="contact_info">
+                                <caption>부서별 연락처 정보</caption>
+                                <tbody>
+                                    <tr>
+                                        <th>Address</th>
+                                        <td>
+                                            대전 유성구 테크노2로 167-6 KIC
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tel</th>
+                                        <td>
+                                            042-931-1901
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Fax</th>
+                                        <td>
+                                            042-931-1902
+                                        </td>
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab_cont">
+                            <table class="contact_info">
+                                <caption>부서별 연락처 정보</caption>
+                                <tbody>
+                                    <tr>
+                                        <th>Address</th>
+                                        <td>
+                                            경기 가평군 설악면 유명산길 37
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tel</th>
+                                        <td>
+                                            031-585-8511
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Homepage</th>
+                                        <td>
+                                            <a href="//www.ji-an.co.kr/" target="_blank">www.ji-an.co.kr</a> 
+                                        </td>
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
             </div>
         </div>
     </main>
@@ -383,26 +521,101 @@
             </div>
         </div>  
     </footer>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0d17b1bcdf1c5aa8442636eb225da27b"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc69501d676da99d81e247bad3c7878e"></script>
     <script>
-        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+
+        const positions = [
+            {
+                title: '서울본사',
+                content: 
+                `<div style="padding:20px 20px 15px;border-radius: 5px; text-align:center">
+                    <img src="../assets/images/common/logo.svg" style="width:160px;display:inline-block" alt="">
+                    <div style="margin-top:5px;font-weight:500;color:#1f2085">서울본사</div>
+                </div>`, 
+                latlng: new kakao.maps.LatLng(37.47875208961993, 126.89564220353793),
+            },
+            {
+                title: '부산지사',
+                content: 
+                `<div style="padding:20px 20px 15px;border-radius: 5px; text-align:center">
+                    <img src="../assets/images/common/logo.svg" style="width:160px;display:inline-block" alt="">
+                    <div style="margin-top:5px;font-weight:500;color:#1f2085">부산지사</div>
+                </div>`, 
+                latlng: new kakao.maps.LatLng(35.15991638028113, 128.98227796470394),
+            },
+            {
+                title: '대전지사',
+                content: 
+                `<div style="padding:20px 20px 15px;border-radius: 5px; text-align:center">
+                    <img src="../assets/images/common/logo.svg" style="width:160px;display:inline-block" alt="">
+                    <div style="margin-top:5px;font-weight:500;color:#1f2085">대전지사</div>
+                </div>`, 
+                latlng: new kakao.maps.LatLng(36.425109083231675, 127.40439565218425),
+            },
+            {
+                title: '지안힐링라운지',
+                content: 
+                `<div style="padding:20px 20px 15px;border-radius: 5px; text-align:center">
+                    <img src="../assets/images/common/logo.svg" style="width:160px;display:inline-block" alt="">
+                    <div style="margin-top:5px;font-weight:500;color:#1f2085">지안힐링라운지</div>
+                </div>`, 
+                latlng: new kakao.maps.LatLng(37.59849536656823, 127.49255886112353),
+            },
+        ];
+
+        var imageSrc = '../assets/images/sub/marker.svg', // 마커이미지의 주소입니다    
+            imageSize = new kakao.maps.Size(29, 42), // 마커이미지의 크기입니다
+            imageOption = {offset: new kakao.maps.Point(14, 42)};
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
+
+        var zoomControl = new kakao.maps.ZoomControl();
+
+        let mapContainer = document.getElementById('map'), 
             mapOption = { 
-                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-                level: 3 // 지도의 확대 레벨
+                center: positions[0].latlng,
+                level: 3
             };
+        let map = new kakao.maps.Map(mapContainer, mapOption); 
+        map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+        map.setZoomable(false);
+        for (let i = 0; i < positions.length; i ++) {
+            let marker = new kakao.maps.Marker({
+                map: map, 
+                position: positions[i].latlng,
+                image: markerImage 
+            });
+            let infowindow = new kakao.maps.InfoWindow({
+                content: positions[i].content,
+                removable : true
+            });
+            
+            // kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+            // kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+            kakao.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
+            (function(marker, infowindow) {
+                infowindow.open(map, marker);
+            })(marker, infowindow);
+            
+        }
+       
+        function makeOverListener(map, marker, infowindow) {
+            return function() {
+                infowindow.open(map, marker);
+            };
+        }
+        function makeOutListener(infowindow) {
+            return function() {
+                infowindow.close();
+            };
+        }
+       
+        function panTo(idx) {            
+            let moveLatLon = positions[idx].latlng;
+            map.panTo(moveLatLon);
 
-        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+        }
 
-        // 마커가 표시될 위치입니다 
-        var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
-
-        // 마커를 생성합니다
-        var marker = new kakao.maps.Marker({
-            position: markerPosition
-        });
-
-        // 마커가 지도 위에 표시되도록 설정합니다
-        marker.setMap(map);
+        panTo(0);
     </script>
 </body>
 </html>

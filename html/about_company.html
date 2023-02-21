@@ -344,6 +344,13 @@
                 </div>
                 <div class="about_company_view">
                     <div class="about_company_view_top">
+                        <div class="about_company_view_txt taC">
+                            <div class="txt_box">
+                                <strong>코리아인스트루먼트(주)</strong>
+                                <p>믿을 수 있는 전문가는 <br> 다릅니다.</p>
+                            </div>
+                            <div class="ac_slide_page"></div>
+                        </div>
                         <div class="ac_slide_main">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img src="../assets/images/sub/ac_img1.png" alt=""></div>
@@ -355,13 +362,6 @@
                                 <div class="swiper-slide"><img src="../assets/images/sub/ac_img7.png" alt=""></div>
                                 <div class="swiper-slide"><img src="../assets/images/sub/ac_img8.png" alt=""></div>
                             </div>
-                        </div>
-                        <div class="about_company_view_txt taC">
-                            <div class="txt_box">
-                                <strong>코리아인스트루먼트(주)</strong>
-                                <p>믿을 수 있는 전문가는 <br> 다릅니다.</p>
-                            </div>
-                            <div class="ac_slide_page"></div>
                         </div>
                     </div>
                     <div class="about_company_view_bot">
@@ -518,25 +518,26 @@
         });
         const ac_slide_thumb = new Swiper('.ac_slide_thumb',{
             loop: true,
-            slidesPerView: 'auto',
-            
+            slidesPerView: 4,
             slideToClickedSlide: true,
             //centeredSlides: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
             touchRatio: 0.2,
             loopedSlides: 4,
             navigation: {
                 nextEl: ".ac_slide_thumb_next",
                 prevEl: ".ac_slide_thumb_prev",
             },
-            //watchSlidesProgress: true,
-            // breakpoints: {
-            //     768: {
-            //         slidesPerView: 1,
-            //     },
-            //     1024: {
-            //         slidesPerView: 3,
-            //     }
-            // }
+            watchSlidesProgress: true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+              
+                }
+            }
         });
 
         ac_slide_main.controller.control = ac_slide_thumb;
