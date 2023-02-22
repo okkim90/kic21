@@ -5418,6 +5418,49 @@ img.mw100 {
   }
 }
 
+.hover_layer_p {
+  position: relative;
+}
+.hover_layer_p:hover .hover_layer {
+  opacity: 1;
+}
+
+.hover_layer {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(34, 34, 34, 0.5);
+}
+.hover_layer_inner {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #1f2085;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hover_layer_inner .ico {
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/sub/ico_detail.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.hover_layer_inner .txt {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #fff;
+}
+
 .sub_wrap.sub_about_company {
   background-image: url(../images/sub/about_company_bg.jpg);
   background-repeat: no-repeat;
@@ -6235,6 +6278,7 @@ img.mw100 {
 }
 .certification_list_item .img_box {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
 }
 @media (max-width: 767px) {
   .certification_list_item .img_box {
