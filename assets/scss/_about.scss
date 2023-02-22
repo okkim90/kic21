@@ -901,6 +901,52 @@
 
 
 .about_recruit {
+    &_top {
+        height: 280px;
+        border-radius: 50px 0 50px 0;
+        overflow: hidden;
+        background-image: url(../images/sub/about_recruit_top.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        margin-bottom: 70px;
+        @include mobile {
+            display: block;
+            padding: 40px;
+            box-sizing: border-box;
+            margin-bottom: 40px;
+            height: 380px;
+            border-radius: 20px 0 20px 0;
+            background-image: url(../images/sub/about_recruit_top_m.png);
+            
+        }
+        .txt_box {
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            @include mobile {
+                text-align: left;
+            }
+            strong {
+                display: block;
+                font-size: 20px;
+                font-weight: bold;
+                @include mobile {
+                    font-size: 16px;
+                }
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.7;
+                margin-top: 20px;
+                @include mobile {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
     &_step {
         display: flex;
         align-items: center;
