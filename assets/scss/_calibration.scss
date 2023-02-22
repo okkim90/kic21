@@ -1,0 +1,154 @@
+
+.cali_sec {
+    font-size: 18px;
+    line-height: 1.7;
+    @include mobile {
+        font-size: 14px;
+    }
+    & + & {
+        margin-top: 100px;
+        @include mobile {
+            margin-top: 60px;
+        }
+    }
+    &.bg_grey {
+        padding: 100px 0;
+        background-color: $CBg_grey;
+        @include mobile {
+            padding: 60px 0;
+        }
+    }
+    &.bg_sky {
+        padding: 100px 0;
+        background-color: $CBg_sky;
+        @include mobile {
+            padding: 60px 0;
+        }
+    }
+    &:first-child {
+        padding-top: 0;
+    }
+}
+.cali_bg_box {
+    text-align: center;
+    border-radius: 50px 0 50px 0;
+    background-color: $CBg_sky;
+    padding: 60px 30px;
+    strong {
+        display: block;
+        font-size: 20px;
+        color: $CBrand;
+    }
+    .bar {
+        display: block;
+        margin: 0 auto;
+        width: 30px;
+        height: 2px;
+        background-color: $CBrand;
+        margin: 30px auto;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+
+.cali1_list1 {
+    display: flex;
+    //align-items: center;
+    @include tablet {
+        
+    }
+    @include mobile {
+        display: block;
+    }
+    .arrow {
+        width: 40px;
+        height: 40px;
+        background-image: url(../images/common/paging_next.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        flex-shrink: 0;
+        background-size: 80px 80px;
+        margin: 0 10px;
+        align-self: center;
+    }
+    &_item {
+        display: flex;
+        flex-direction: column;
+        @include mobile {
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 15px;
+            border-radius: 20px;
+            border: 1px solid $CLine;
+            background-color: #f8f8f8;
+            & + & {
+                margin-top: 20px;
+            }
+            .img_box {
+                width: 120px;
+                height: 100px;
+                flex-shrink: 0;
+                border: 1px solid $CLine;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .txt_box {
+            flex: 1;
+            background-color: $CBg_grey;
+            padding: 40px 50px;
+            @include tablet {
+                padding: 30px;
+            }
+            @include mobile {
+                padding: 0;
+                padding-left: 20px;
+                background-color: transparent;
+                
+            }
+            .tit {
+                display: block;
+                font-size: 20px;
+                @include tablet {
+                    font-size: 18px;
+                }
+                @include mobile {
+                    font-size: 16px;
+                    line-height: 1.3;
+                }
+            }
+            .desc {
+                margin-top: 10px;
+                font-size: 18px;
+                color: #999;
+                @include tablet {
+                    font-size: 16px;
+                    
+                }
+                @include mobile {
+                    font-size: 13px;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+}
+
+.cali1_list2 {
+    display: flex;
+    &_item {
+        text-align: center;
+        .ico_box {
+            margin: 0 auto;
+            width: 127px;
+            height: 127px;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 4px 7px 0 rgba(31, 32, 133, 0.12);
+        }
+    }
+}

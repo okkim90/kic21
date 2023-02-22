@@ -13,6 +13,19 @@ img.mw100 {
     width: auto;
     max-width: 100%;
 }
+.gap_top {
+    margin-top: 50px;
+    @include mobile {
+        margin-top: 30px;
+    }
+}
+.gap_bot {
+    margin-bottom: 50;
+    @include mobile {
+        margin-bottom: 30px;
+    }
+}
+
 
 .right_nav {
     position: absolute;
@@ -242,6 +255,9 @@ img.mw100 {
     z-index: 99;
     background-color: #fff;
     padding-bottom: 100px;
+    &.pb0 {
+        padding-bottom: 0;
+    }
     @include mobile {
         padding-bottom: 60px;
     }
@@ -1504,11 +1520,14 @@ img.mw100 {
 
 .hover_layer_p {
     position: relative;
-    &:hover {
-        .hover_layer {
-            opacity: 1;
+    @media(hover: hover) and (pointer: fine) {
+        &:hover {
+            .hover_layer {
+                opacity: 1;
+            }
         }
     }
+   
 }
 .hover_layer {
     transition: opacity .2s ease-in-out;
@@ -1531,17 +1550,31 @@ img.mw100 {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        @include mobile {
+            width: 90px;
+            height: 90px;
+        }
         .ico {
             width: 40px;
             height: 40px;
             background-image: url(../images/sub/ico_detail.svg);
             background-repeat: no-repeat;
             background-position: center center;
+            @include mobile {
+                width: 26px;
+                height: 26px;
+                background-size: cover;
+            }
         }
         .txt {
             font-size: 18px;
             margin-top: 10px;
             color: #fff;
+            @include mobile {
+                font-size: 12px;
+                margin-bottom: 4px;
+            }
         }
     }
 }
