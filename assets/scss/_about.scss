@@ -7,7 +7,7 @@
         padding-bottom: 220px;
         @include mobile {
             padding-bottom: 66px;
-            background-size: contain;
+            background-size: cover;
         }
     }
     &.sub_about_ceo {
@@ -95,7 +95,7 @@
             }
             @include mobile {
                 margin-top: 30px;
-                width: calc(100%/2); 
+                //width: calc(100%/2); 
             }
             .ico_box {
                 width: 127px;
@@ -126,9 +126,10 @@
                 margin-top: 20px;
                 padding: 0 10px;
                 @include mobile {
-                    font-size: 14px;
-                    margin-top: 15px;
+                    font-size: 13px;
+                    margin-top: 10px;
                     word-break: break-all;
+                    padding: 0 5px;
                 }
                 .tit {
                     display: block;
@@ -138,7 +139,7 @@
                     margin-top: 4px;
                     font-weight: bold;
                     letter-spacing: -0.4px;
-                    @include mobile {
+                    &.wbba {
                         word-break: break-all;
                     }
                 }
@@ -504,6 +505,9 @@
     }
     &_info {
         margin-top: 90px;
+        @include mobile {
+            margin-top: 30px;
+        }
         .tip_s {
             color: #999;
             margin-top: 0.8em;
@@ -682,7 +686,7 @@
 
             @include mobile {
                 padding: 10px 0;
-                font-size: 14px;
+                font-size: 13px;
                 .tit {
                     padding: 0;
                     padding-right: 10px;
@@ -713,6 +717,11 @@
     &_sec {
         padding-bottom: 100px;
         position: relative;
+
+        @include mobile {
+            padding-bottom: 40px;
+        }
+
         &::before {
             content:'';
             position: absolute;
@@ -722,9 +731,15 @@
             left: 50%;
             bottom: 0;
             transform: translateX(-50%);
+            @include mobile {
+                height: 100%;
+            }
         }
         & + & {
             margin-top: 150px;
+            @include mobile {
+                margin-top: 40px;
+            }
         }
         &_tit {
             text-align: center;
@@ -732,6 +747,23 @@
             line-height: 1.5;
             font-weight: bold;
             margin-bottom: 70px;
+            @include mobile { 
+                font-size: 20px;
+                margin-bottom: 30px;
+                position: relative;
+                z-index: 1;
+                &::before {
+                    content:'';
+                    position: absolute;
+                    width: 100vw;
+                    height: calc(100% + 40vw);
+                    background-color: #fff;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 0;
+                    z-index: -1;
+                }
+            }
         }
     }
 }
@@ -739,26 +771,266 @@
     &_wrap {
         overflow: hidden;
         
-        margin-left: -20px;
-        margin-right: -20px;
-        padding: 0 20px;
+        margin-left: -10px;
+        margin-right: -10px;
+        padding: 0 10px;
         padding-top: 10px;
+        @include mobile { 
+            position: relative;
+            z-index: 2;
+        }
     }
     
     &_item {
+        cursor: pointer;
         .img_box {
-            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+            @include mobile {
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+                border: 1px solid $CLine;
+            }
         }
         .txt_box {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 1.78;
+            word-break: break-all;
+            @include tablet {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-top: 20px;
+            }
+            @include mobile {
+                font-size: 12px;
+                line-height: 1.67;
+                margin-top: 10px;
+                word-break: break-all;
+            }
+        }
+        @include mobile { 
+            margin-top: 30px;
         }
     }
-    &_page {
-        position: relative;
-        font-size: 20px;
-        z-index: 10;
-        text-align: center;
+    &_bot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-top: 50px;
-    }           
+        position: relative;
+        z-index: 10;
+
+        @include mobile {
+            display: none;
+        }
+        .slide_btn {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::after {
+                content:'';
+                width: 10px;
+                height: 10px;
+                box-sizing: border-box;
+                
+            }
+            &.slide_prev {
+                order: 0;
+                &::after {
+                    border-left: 2px solid #222;
+                    border-top: 2px solid #222;
+                    transform: rotate(-45deg);
+                }
+            }
+            &.slide_next {
+                order: 2;
+                &::after {
+                    border-right: 2px solid #222;
+                    border-top: 2px solid #222;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+    }
+    &_page {
+        width: auto;
+        position: static;
+        bottom: 0;
+        font-size: 16px;
+        text-align: center;
+        order: 1;
+        letter-spacing: 0.1em;
+        margin: 0 10px;
+        .swiper-pagination-current {
+            font-weight: bold;
+            &::before {
+                content: '0';
+            }
+        }
+        .swiper-pagination-total {
+            color: #999;
+            &::before {
+                content: '0';
+            }
+        }
+    }      
+    @include mobile {
+        .swiper-wrapper {
+            flex-wrap: wrap;
+            overflow: visible;
+        }
+        &_wrap {
+            padding: 0;
+            margin-left: -5px;
+            margin-right: -5px;
+            overflow: visible;
+            margin-top: -30px;
+        }
+        &_item { 
+            width: 50%;
+            padding: 0 5px;
+            box-sizing: border-box;
+        }
+    }
+    
+}
+
+
+.about_recruit {
+    &_step {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        @include mobile {
+            flex-wrap: wrap;
+            margin-top: -25px;
+        }
+        .bar {
+            width: 40px;
+            height: 9px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(../images/sub/ico_arrow2.svg);
+            flex-shrink: 0;
+            margin: 0 30px;
+            margin-bottom: 56px;
+            @include tablet {
+                margin: 0 15px;
+                margin-bottom: 56px;
+            }
+            @include mobile {
+                display: none;
+            }
+        }
+        &_item {
+            text-align: center;
+            flex: 1;
+            max-width: 180px;
+            @include mobile { 
+                max-width: none;
+                width: 50%;
+                flex: auto;
+                padding: 0 25px;
+                box-sizing: border-box;
+                margin-top: 25px;
+            }
+
+
+            .txt_box {
+                font-weight: bold;
+                font-size: 24px;
+                margin-top: 20px;
+                @include mobile { 
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+            }
+            
+            .ico_box {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                border-radius: 50%;
+                background-repeat: no-repeat;
+                background-position: center center;
+                @include tablet {
+                    background-size: 50%;
+                }
+                &_outer {
+                    margin: 0 auto;
+                    width: 100%;
+                    padding-top: 100%;
+                    position: relative;
+                }
+            }
+            &.step1 {
+                .ico_box {
+                    background-color: #9db9e2;
+                    background-image: url(../images/sub/recruit_ico1.svg);
+                }
+            }
+            &.step2 {
+                .ico_box {
+                    background-color: #7691ca;
+                    background-image: url(../images/sub/recruit_ico2.svg);
+                }
+            }
+            &.step3 {
+                .ico_box {
+                    background-color: #3f53a3;
+                    background-image: url(../images/sub/recruit_ico3.svg);
+                }
+            }
+            &.step4 {
+                .ico_box {
+                    background-color: #1f2085;
+                    background-image: url(../images/sub/recruit_ico4.svg);
+                }
+            }
+        }
+    }
+
+}
+
+
+.about_recruit_step_detail {
+    margin-top: 90px;
+    @include mobile {
+        margin-top: 40px;
+    }
+    .list_dot {
+        line-height: 1.6;
+        
+        li {
+            position: relative;
+            padding-left: 14px;
+            @include mobile {
+                padding-left: 8px;
+            }
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            & + li {
+                margin-top: 0.2em;
+            }
+        }
+    }
+    .tip_s {
+        color: #999;
+        margin-top: 0.8em;
+        font-size: 0.9em;
+        &::before{
+            content: '※';
+            color: #f02727;
+
+        }
+    }
 }

@@ -266,7 +266,7 @@
                     <div class="certification_list_wrap">
                         <div class="certification_list">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide certification_list_item">
+                                <div class="swiper-slide certification_list_item" onclick="certification_modal(this)">
                                     <div class="img_box">
                                         <img src="../assets/images/sub/certification1_kor.png" alt="">
                                     </div> 
@@ -274,7 +274,7 @@
                                         국가공인교정기관인증서(국문) <br> 서울본사
                                     </div>
                                 </div>
-                                <div class="swiper-slide certification_list_item">
+                                <div class="swiper-slide certification_list_item" onclick="certification_modal(this)">
                                     <div class="img_box">
                                         <img src="../assets/images/sub/certification1_eng.png" alt="">
                                     </div> 
@@ -282,7 +282,7 @@
                                         국가공인교정기관인증서(영문) <br> 서울본사
                                     </div>
                                 </div>
-                                <div class="swiper-slide certification_list_item">
+                                <div class="swiper-slide certification_list_item" onclick="certification_modal(this)">
                                     <div class="img_box">
                                         <img src="../assets/images/sub/certification2_kor.png" alt="">
                                     </div> 
@@ -290,7 +290,7 @@
                                         국가공인교정기관인증서 (국문) <br> 부산지사
                                     </div>
                                 </div>
-                                <div class="swiper-slide certification_list_item">
+                                <div class="swiper-slide certification_list_item" onclick="certification_modal(this)">
                                     <div class="img_box">
                                         <img src="../assets/images/sub/certification2_eng.png" alt="">
                                     </div> 
@@ -299,7 +299,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="certification_list_page"></div>
+                            <div class="certification_list_bot">
+                                <button class="slide_btn slide_prev"></button>
+                                <button class="slide_btn slide_next"></button>
+                                <div class="certification_list_page"></div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -308,7 +313,7 @@
                     <div class="certification_list_wrap">
                         <div class="certification_list">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide certification_list_item">
+                                <div class="swiper-slide certification_list_item" onclick="certification_modal(this)">
                                     <div class="img_box">
                                         <img src="../assets/images/sub/award1.png" alt="">
                                     </div> 
@@ -316,7 +321,7 @@
                                         석탑산업훈장
                                     </div>
                                 </div>
-                                <div class="swiper-slide certification_list_item">
+                                <div class="swiper-slide certification_list_item" onclick="certification_modal(this)">
                                     <div class="img_box">
                                         <img src="../assets/images/sub/award2.png" alt="">
                                     </div> 
@@ -324,7 +329,7 @@
                                         제40회 한국정밀산업기술대회 정밀측정기술부문
                                     </div>
                                 </div>
-                                <div class="swiper-slide certification_list_item">
+                                <div class="swiper-slide certification_list_item" onclick="certification_modal(this)">
                                     <div class="img_box">
                                         <img src="../assets/images/sub/award3.png" alt="">
                                     </div> 
@@ -332,7 +337,7 @@
                                         제41회 한국정밀산업기술대회 정밀측정기술부문
                                     </div>
                                 </div>
-                                <div class="swiper-slide certification_list_item">
+                                <div class="swiper-slide certification_list_item" onclick="certification_modal(this)">
                                     <div class="img_box">
                                         <img src="../assets/images/sub/award4.png" alt="">
                                     </div> 
@@ -340,7 +345,7 @@
                                         한국정밀산업발전 표창장
                                     </div>
                                 </div>
-                                <div class="swiper-slide certification_list_item">
+                                <div class="swiper-slide certification_list_item" onclick="certification_modal(this)">
                                     <div class="img_box">
                                         <img src="../assets/images/sub/award5.png" alt="">
                                     </div> 
@@ -349,7 +354,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="certification_list_page"></div>
+                            <div class="certification_list_bot">
+                                <button class="slide_btn slide_prev"></button>
+                                <button class="slide_btn slide_next"></button>
+                                <div class="certification_list_page"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -357,6 +366,19 @@
         </div>
     </main>
     
+    <!--인정서 모달팝업-->
+    <div class="layer_popup popup_certification">
+        <div class="layer_popup_container">
+            <div class="popup_certification_img_box">
+                <div class="popup_certification_btn">
+                    <div class="tit"></div>
+                    <button class="close_popup" onclick="close_popup(this)"></button>
+                </div>
+                <img src="" alt="" class="popup_certification_img">              
+            </div>
+        </div>
+    </div>
+
     <footer id="footer" class="footer">
         <div class="footer_top">
             <div class="inner">
@@ -477,7 +499,7 @@
     <script>
         var mySwiper = undefined;
         function initSwiper(){ 
-            let screenWidth = $(window).width();
+            let screenWidth = window.innerWidth;
             if(screenWidth > 767 && mySwiper == undefined){
                 mySwiper = new Swiper('.certification_list',{
                     slidesPerView: 4,
@@ -488,6 +510,10 @@
                     pagination: {
                         el: '.certification_list_page',
                         type: "fraction",
+                    },
+                    navigation: {
+                        nextEl: '.certification_list_bot .slide_next',
+                        prevEl: '.certification_list_bot .slide_prev',
                     },
                 });
             }else if(screenWidth < 768 && mySwiper != undefined){
@@ -504,17 +530,23 @@
         $(window).on('resize', function(){
             initSwiper();
         });  
-        // let certification_list = new Swiper('.certification_list',{
-        //     slidesPerView: 3,
-        //     loop: true,
-        //     centeredSlides: true,
-        //     spaceBetween: 40,
-        //     loopedSlides: 3,
-        //     pagination: {
-        //         el: '.certification_list_page',
-        //         type: "fraction",
-        //     },
-        // });
+        
+
+        let $popup_container = $('.popup_certification');
+        let $popup_container_tit = $('.popup_certification .tit');
+        let $popup_container_img = $('.popup_certification_img');
+        function certification_modal(target){
+            let $this = $(target);
+            let $src = $this.find('.img_box img').attr('src');
+            let $txt = $this.find('.txt_box').text();
+            
+            console.log($src);
+            console.log($txt);
+            
+            $popup_container_tit.text($txt);
+            $popup_container_img.attr('src',$src);
+            $popup_container.addClass('on');
+        }
     </script>
 </body>
 </html>

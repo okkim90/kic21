@@ -832,8 +832,8 @@ img.mw100 {
         @include mobile {
             
             box-sizing: border-box;
-            padding: 15px 10px;
-            font-size: 14px;
+            padding: 10px 10px;
+            font-size: 13px;
         }
     }
     td {
@@ -842,7 +842,7 @@ img.mw100 {
         font-size: 20px;
         @include mobile {
             padding: 10px;
-            font-size: 14px;
+            font-size: 13px;
             padding-right: 0;
         }
     }

@@ -64,18 +64,74 @@
                 font-size: 18px;
             }
         }
-        .close_popup {
-            width: 30px;
-            height: 30px;
-            background-image: url(../images/common/ico_x.svg);
-            background-repeat: no-repeat;
-            background-size: 40px;
-            background-position: center center;
-            @include mobile {
-                background-size: 30px;
-                transform: translate(10px,-10px);
+        
+    }
+
+
+    .close_popup {
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/common/ico_x.svg);
+        background-repeat: no-repeat;
+        background-size: 40px;
+        background-position: center center;
+        &.ty_w {
+            background-image: url(../images/common/ico_x_w.svg);
+        }
+        @include mobile {
+            background-size: 30px;
+            transform: translate(10px,-10px);
+        }
+        
+    }
+    &.popup_certification {
+        background-color: rgba(0,0,0,.6);
+        .popup_certification_btn {
+            position: sticky;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid $CLine;
+            .tit {
+                font-size: 16px;
+                font-weight: bold;
+                flex: 1;
+                @include mobile {
+                    font-size: 14px;
+                }
             }
+        }
+        .close_popup {
             
+            margin-left: 10px;
+            flex-shrink: 0;
+            @include mobile {
+                transform: none;
+            }
+        }
+    }
+    .popup_certification_img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        
+        &_box {
+            background-color: #fff;
+            box-sizing: border-box;
+            position: relative;
+            max-width: 100%;
+            max-height: 100%;
+            overflow-y: auto;
+        }
+        &_inner {
+            overflow-y: auto;
+            height: 100%;
+            width: 100%;
         }
     }
 }
