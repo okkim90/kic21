@@ -1426,6 +1426,7 @@ input::-webkit-search-results-decoration {
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 .layer_popup .popup_index_bot {
   background-color: #222;
