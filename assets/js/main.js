@@ -89,7 +89,11 @@ $progress_btn.on('click',function(){
     progress_pause()
   }
 });
-startProgressbar();
+
+if($('.main_visual') && $('.main_visual').length > 0) {
+  startProgressbar();
+}
+
 
 
 

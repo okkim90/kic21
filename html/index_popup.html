@@ -696,18 +696,14 @@
         }
         
 
-        $(function() {
+        $( document ).ready(function(){
             togglePopup();
-            $(window).on('load',function(){
-                
-                let popup_slide = new Swiper('.popup_index_slider',{
-                    loop:true,
-                    pagination: {
-                        el: '.popup_index_slider_page',
-                        type: "fraction",
-                    },
-                });
-                
+            let popup_slide = new Swiper('.popup_index_slider',{
+                loop:true,
+                pagination: {
+                    el: '.popup_index_slider_page',
+                    type: "fraction",
+                },
             });
         });
     </script>

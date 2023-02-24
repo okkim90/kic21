@@ -19,6 +19,7 @@
         .tit {
             font-size: 40px;
             line-height: 50px;
+            font-weight: bold;
         }
         .desc {
             font-size: 24px;
@@ -49,6 +50,7 @@
             left: 50%;
             top: 50%;
             transform: translate(-50% , -50%);
+            transition: background-color .1s cubic-bezier(.55,0,.1,1);
         }
         &::after {
             content:'';
@@ -59,9 +61,14 @@
             left: 50%;
             top: 50%;
             transform: translate(-50% , -50%);
+            transition: background-color .1s cubic-bezier(.55,0,.1,1);
         }
         &:hover {
-            box-shadow: 0 0 6px rgba(#000, .3);
+            background-color: #555;
+            border-color: #555;
+            &::before, &::after {
+                background-color: #fff;
+            }
         }
     }
     &_wrap {
@@ -111,7 +118,7 @@
             height: 100%;
             left: 0;
             top: 0;
-            background-color: rgba(#000,.3);
+            background-color: rgba(#000,.1);
             z-index: 1;
         }
     }
@@ -399,6 +406,8 @@
     &_cont {
         overflow: hidden;
         position: relative;
+        border-top: 1px solid #CFCFCF;
+        border-bottom: 1px solid #CFCFCF;
         &::before {
             content:'';
             position: absolute;
@@ -406,7 +415,7 @@
             height: 100%;
             left: 0;
             top: 0;
-            background-color: rgba(#fff,.2);
+            background-color: rgba(#fff,.15);
             z-index: 10;
         }
         .cvi {
@@ -474,14 +483,14 @@
         display: flex;
         position: relative;
         z-index: 10;
-        border-left: 1px solid rgba(#fff,.3);
-        border-right: 1px solid rgba(#fff,.3);
+        border-left: 1px solid #CFCFCF;
+        border-right: 1px solid #CFCFCF;
     }
     &_item {
         flex: 1;
         text-align: center;
         & + & {
-            border-left: 1px solid rgba(#fff,.4);
+            border-left: 1px solid #CFCFCF;
         }
     }
     &_link {
@@ -532,7 +541,7 @@
 
             .desc1 {
                 transition: all .3s cubic-bezier(.55,0,.1,1);
-                color: #999;
+                color: #222;
             }
             .desc2 {
                 opacity: 0;
@@ -986,6 +995,10 @@
         &_progress {
             width: 130px;
         }
+        .main_visual_link img.obj_pos_left{
+            object-position: 40% center;
+        }
+        
     }
 
     .main_intro {
@@ -1023,6 +1036,8 @@
         }
         &_cont {
             overflow: visible;
+            border-top: none;
+            border-bottom: none;
             .cvi {
                 display: none;
             }
