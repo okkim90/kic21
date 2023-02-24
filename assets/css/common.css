@@ -3215,10 +3215,10 @@ input::-webkit-search-results-decoration {
   background-image: url("../images/main/bm_bg1.jpg");
 }
 .main_business_bg .bg_item2 {
-  background-image: url("../images/main/bm_bg2.jpeg");
+  background-image: url("../images/main/bm_bg2.jpg");
 }
 .main_business_bg .bg_item3 {
-  background-image: url("../images/main/bm_bg3.jpeg");
+  background-image: url("../images/main/bm_bg3.jpg");
 }
 .main_business_bg .bg_item.on {
   opacity: 1;
@@ -3249,7 +3249,7 @@ input::-webkit-search-results-decoration {
 }
 @media (hover: hover) {
   .main_business_link:hover {
-    background-color: rgba(31, 32, 133, 0.7);
+    background-color: rgba(31, 32, 133, 0.8);
   }
   .main_business_link:hover .txt_box .tit {
     color: #fff;

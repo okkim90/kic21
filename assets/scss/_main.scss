@@ -452,10 +452,10 @@
                 background-image: url("../images/main/bm_bg1.jpg");
             }
             &2 {
-                background-image: url("../images/main/bm_bg2.jpeg");
+                background-image: url("../images/main/bm_bg2.jpg");
             }
             &3 {
-                background-image: url("../images/main/bm_bg3.jpeg");
+                background-image: url("../images/main/bm_bg3.jpg");
             }
                 
             
@@ -491,7 +491,7 @@
         transition: background-color .3s cubic-bezier(.55,0,.1,1);
         @media (hover: hover) {
             &:hover {
-                background-color: rgba($CBrand,.7);
+                background-color: rgba($CBrand,.8);
                 .txt_box {
                     .tit {
                         color: #fff;
