@@ -1389,6 +1389,9 @@ input::-webkit-search-results-decoration {
 .layer_popup.on {
   display: block;
 }
+.layer_popup.popup_index .layer_popup_container {
+  padding: 30px;
+}
 .layer_popup .popup_index_slide_link {
   display: block;
   position: relative;
