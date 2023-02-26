@@ -2908,16 +2908,6 @@ input::-webkit-search-results-decoration {
   transform: scale(1.2);
   opacity: 0;
 }
-.main_visual_link::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
 .main_visual .txt_box {
   position: relative;
   z-index: 10;
@@ -2926,11 +2916,11 @@ input::-webkit-search-results-decoration {
 }
 .main_visual .txt_box strong {
   display: block;
+  font-weight: 700;
   font-size: 5em;
   transition: all 1.2s cubic-bezier(0.42, 0, 0.38, 1);
   transform: translateY(100px);
   opacity: 0;
-  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
   font-family: "Montserrat";
 }
 .main_visual .txt_box p {
@@ -2940,7 +2930,6 @@ input::-webkit-search-results-decoration {
   transition: all 1.2s cubic-bezier(0.42, 0, 0.38, 1);
   transform: translateY(100px);
   opacity: 0;
-  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
 }
 .main_visual_item.on .txt_box strong {
   opacity: 1;
