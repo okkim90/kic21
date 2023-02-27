@@ -26,3 +26,14 @@ function close_popup(target){
 }
 
 
+
+$('.sub_tab_link.no_link').on('click',function(e){
+    e.preventDefault();
+    let $li = $(this).parents('.sub_tab_item');
+    let $idx = $li.index();
+    let $tabCont = $('.tab_cont_wrap').find('.tab_cont');
+    //console.log($idx);
+    $li.addClass('on').siblings('.sub_tab_item').removeClass('on');
+    $tabCont.removeClass('on');
+    $tabCont.eq($idx).addClass('on');
+});

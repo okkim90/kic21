@@ -13,7 +13,7 @@
 
      <!-- js -->
      <script src="../assets/js/jquery-3.1.1.min.js"></script>
-     <script defer src="../assets/js/swiper.min.js"></script>
+     <script src="../assets/js/swiper.min.js"></script>
      <script defer src="../assets/js/scrollAni.js"></script>
      <script defer src="../assets/js/header.js"></script>
 
@@ -184,7 +184,7 @@
     </header>
     
     <main id="container" class="container">
-        <div class="sub_visual sub_support">
+        <div class="sub_visual sub_rnd">
             <!--[DEV] .sub_visual (서브 상단 비주얼)
                 회사소개: sub_company
                 교정안내: sub_business
@@ -193,8 +193,8 @@
                 고객지원: sub_cs
             -->
             <div class="txt_box">
-                <h2 class="tit">교정절차</h2>
-                <p class="desc">오랜 경험과 노하우를 바탕으로 언제나 최고의 교정 서비스를 제공합니다.</p>
+                <h2 class="tit">연구개발</h2>
+                <p class="desc">끊임없는 연구개발을 통해 교정기술 발전을 선도하고 있습니다.</p>
             </div>
         </div>
         <!-- sub 공통 dep2 nav-->
@@ -202,11 +202,9 @@
             <div class="sub_nav_toggle"></div>
             <ul class="sub_nav_list">
                 <!-- [D] 현재페이지 활성화 on class -->
-                <li class="sub_nav_item on"><a href="support_step.html">신청절차</a></li>
-                <li class="sub_nav_item"><a href="request_list.html">견적요청</a></li>
-                <li class="sub_nav_item"><a href="foa.html">인정분야</a></li>
-                <li class="sub_nav_item"><a href="price.html">교정단가조회</a></li>
-                <li class="sub_nav_item"><a href="commission.html">교정수수료</a></li>
+                <li class="sub_nav_item on"><a href="">기술특허</a></li>
+                <li class="sub_nav_item "><a href="">제품정보</a></li>
+                <li class="sub_nav_item "><a href="">기술문의</a></li>
             </ul>
             <script>
                 let sub_nav = document.querySelector('.sub_nav');
@@ -253,233 +251,35 @@
             </div>
         </div>
 
-        <div id="sub_wrap" class="sub_wrap">
+        <div class="sub_wrap">
             <div class="inner">
+                <span id="cont_pos"></span>
                 <div class="sub_tit">
-                    <h2 class="tit">신청절차</h2>
+                    <h2 class="tit">탄속측정시스템</h2>
+                    <div class="desc">Magnetic Projectile Detector & Counter Chronograph / 자화 탄 검출기 및 카운터 크로노그래프</div>
                 </div>
                 <div class="sub_tab">
-                    <ul class="sub_tab_list">
-                        <li class="sub_tab_item on"><a href="" class="sub_tab_link no_link">의뢰교정</a></li>
-                        <li class="sub_tab_item"><a href="" class="sub_tab_link no_link">택배교정</a></li>
-                        <li class="sub_tab_item"><a href="" class="sub_tab_link no_link">출장교정</a></li>
+                    <ul class="sub_tab_list col4">
+                        <li class="sub_tab_item on"><a href="rnd_patent1_1.html#cont_pos" class="sub_tab_link ">Velocity Measurement System</a></li>
+                        <li class="sub_tab_item "><a href="rnd_patent1_2.html#cont_pos" class="sub_tab_link ">Velocity Counter Chronograph</a></li>
+                        <li class="sub_tab_item "><a href="rnd_patent1_3.html#cont_pos" class="sub_tab_link ">Solenoid Coil Sensor</a></li>
+                        <li class="sub_tab_item "><a href="rnd_patent1_4.html#cont_pos" class="sub_tab_link ">Projectile Magnetizer (immobile)</a></li>
+                        <li class="sub_tab_item"><a href="rnd_patent1_5.html#cont_pos" class="sub_tab_link ">Projectile Magnetizer (mobile)</a></li>
+                        <li class="sub_tab_item"><a href="rnd_patent1_6.html#cont_pos" class="sub_tab_link ">Solenoid Coil Sensor Fixture</a></li>
+                        <li class="sub_tab_item"><a href="rnd_patent1_7.html#cont_pos" class="sub_tab_link ">Solenoid Coil Sensor Mount</a></li>
+                        <li class="sub_tab_item"><a href="rnd_patent1_8.html#cont_pos" class="sub_tab_link ">시스템 규격</a></li>
                     </ul>
-                    <script>
-                        
-                    </script>
                 </div>
-                <div class="inner2">
-                    <div class="sub_sec tab_cont_wrap">
-                        <div class="tab_cont on">
-                            <div class="sub_sec_tit">
-                                <h3 class="tit">의뢰교정</h3>
-                                <div class="download_btns">
-                                    <a href="../assets/files/사업자등록증.pdf" target="_blank" class="btn_download">사업자등록증</a>
-                                    <a href="../assets/files/교정신청서.xls" target="_blank" class="btn_download">교정신청서</a>
-                                </div>
-                            </div>
-                            <ol class="step_list">
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step1_1.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">01. 방문</strong>
-                                        <div class="desc">
-                                            방문시간: 08:30 ~ 17:30 <br> (토요일 및 공휴일 휴무)
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step1_2.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">02. 교정신청</strong>
-                                        <div class="desc">
-                                            교정신청서와 장비 제출 <br> (최초 거래 시 사업자등록증 必)
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step1_3.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">03. 교정완료확정</strong>
-                                        <div class="desc">
-                                            교정완료 여부 확인 <br> (E-교정서비스 or 고객센터)
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step1_4.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">04. 교정수수료입금</strong>
-                                        <div class="desc">
-                                            수수료별도 안내 <br> (교정수수료 + 부가세 + 소급료 (교정수수료x10%))
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step1_5.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">05. 장비분출 교정성적서 발급</strong>
-                                        <div class="desc">
-                                            정산 후 장비, 교정성적서 발급
-                                        </div>
-                                    </div>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="tab_cont">
-                            <div class="sub_sec_tit">
-                                <h3 class="tit">택배교정</h3>
-                                <div class="download_btns">
-                                    <a href="../assets/files/사업자등록증.pdf" target="_blank" class="btn_download">사업자등록증</a>
-                                    <a href="../assets/files/교정신청서.xls" target="_blank" class="btn_download">교정신청서</a>
-                                </div>
-                            </div>
-                            <ol class="step_list">
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step2_1.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">01. 교정상담 견적서 요청</strong>
-                                        <div class="desc">
-                                            택배 발송 전 교정가능 여부 상담 및 견적서 요청 <br>
-                                            <div class="desc_s">
-                                                <span class="fc_red">※</span> 택배불가 품목 : 고가장비 및 파손위험이 있는 장비 (15kg 이상되는 증량물)
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step2_2.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">02. 택배발송</strong>
-                                        <div class="desc">
-                                            <strong class="desc_tit">계측기 택배발송</strong>
-                                            <ol class="desc_ol">
-                                                <li>필수서류 : 교정신청서, 사업자등록증(최초 거래 시), 견적서</li>
-                                                <li>택배비 : 고객부담</li>
-                                                <li>
-                                                    <span>서울본사 :</span>  서울 구로구 남부순환로 1303 2층 고객지원팀 <br>
-                                                    <span>부산지사 :</span> 부산 사상구 광장로 56번길 45 <br>
-                                                    <span>대전지사 :</span> 대전 유성구 테크노 11로 32
-                                                </li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step2_3.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">03. 택배접수</strong>
-                                        <div class="desc">
-                                            택배접수 후 교정신청서 팩스로 발송
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step2_4.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">04. 교정진행</strong>
-                                        <div class="desc">
-                                            E-교정서비스 or 고객센터에서 교정진행 사항 확인 가능
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step2_5.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">05. 교정완료확인 교정수수료입금</strong>
-                                        <div class="desc">
-                                            교정완료 후 수수료별도 안내 <br> (교정수수료 + 부가세 + 소급료 (교정수수료x10%))
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step2_6.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">06. 장비불출 계측기 수령</strong>
-                                        <div class="desc">
-                                            교정수수료 확인 후 계측기 및 교정성적서 택배 발송 <br> 
-                                            <div class="desc_s">
-                                                <span class="fc_red">※</span> 택배비 : 당사부담
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="tab_cont">
-                            <div class="sub_sec_tit">
-                                <h3 class="tit">출장교정</h3>
-                                <div class="download_btns">
-                                    <a href="../assets/files/사업자등록증.pdf" target="_blank" class="btn_download">사업자등록증</a>
-                                    <a href="../assets/files/교정신청서.xls" target="_blank" class="btn_download">교정신청서</a>
-                                </div>
-                            </div>
-                            <ol class="step_list">
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step3_1.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">01. 출장교정 신청</strong>
-                                        <div class="desc">
-                                            출장교정 대상 계측기 현황, 품명, 모델, 제조사, 수량을 작성 후 신청
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step3_2.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">02. 출장교정 일자확정</strong>
-                                        <div class="desc">
-                                            출장교정 가능일정 상호 협의 후 확정 <br>
-                                            <div class="desc_s">
-                                                <span class="fc_red">※</span> 최소 2~3주 기간 소요 예상
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step3_3.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">03. 출장교정 시행</strong>
-                                        <div class="desc">
-                                            <ol class="desc_ol">
-                                                <li>출장교정 최초거래인 경우 사업자등록증 1부 필요</li>
-                                                <li>출장교정 시 현장에서 교정이 불가능한 장비는 Pick up하여 당사에서 교정</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step3_4.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">04. 교정수수료 확인</strong>
-                                        <div class="desc">
-                                            교정수수료 안내 <br>
-                                            <div class="desc_s">
-                                                <span class="fc_red">※</span> 교정완료된 장비에 한해 부가됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step3_5.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">05. 교정수수료 입금</strong>
-                                        <div class="desc">
-                                            교정완료 후 수수료별도 안내 <br> (교정수수료 + 출장료 + 부가세 + 소급료 (교정수수료x10%))
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step_list_item">
-                                    <i class="icon_box"><img src="../assets/images/sub/step3_6.svg" alt=""></i>
-                                    <div class="txt_box">
-                                        <strong class="tit">06. 교정성적서 발급</strong>
-                                        <div class="desc">
-                                            정산 후 장비, 교정성적서 발급
-                                        </div>
-                                    </div>
-                                </li>
-                            </ol>
-                        </div>
+                <div class="sub_sec inner_rnd">
+                    <div class="sub_sec_tit ty2">
+                        <h3 class="tit2">Velocity Measurement System (속도 측정 시스템)</h3>
+                    </div>
+                    <div class="img_box_rnd taC">
+                        <img src="../assets/images/sub/rnd/rnd_patent_1.png" alt="자화기 > 슬레노이트코일 > 신호증폭기 > 속도계산기 > 계측데이터" style="max-width: 910px;" >
+                    </div>
+                    <div class="btn_area taC ty_bot">
+                        <a href="rnd_q_write.html" class="f_btn ty_big bg_blue">기술문의</a>
+                        <a href="rnd_patent_intro.html" class="f_btn ty_big line_black">목록</a>
                     </div>
                 </div>
             </div>
