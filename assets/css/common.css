@@ -3680,6 +3680,7 @@ input::-webkit-search-results-decoration {
   }
   .main_visual .txt_box strong {
     font-size: 2.2em;
+    line-height: 1.1;
   }
   .main_visual .txt_box p {
     font-size: 0.9em;
