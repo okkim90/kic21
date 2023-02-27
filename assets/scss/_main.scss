@@ -332,18 +332,18 @@
                     background-image: url("../images/main/main_intro"+$i+".png");
                 }
             }
-            box-shadow: inset 0 0 20px rgba(#000, .4);
+            box-shadow: inset 0 0 20px rgba(#000, .3);
         }
-        &::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            background-color: rgba(0,0,0,.2);
-            z-index: 1;
-        }
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     width: 100%;
+        //     height: 100%;
+        //     left: 0;
+        //     top: 0;
+        //     background-color: rgba(0,0,0,.2);
+        //     z-index: 1;
+        // }
 
         .txt_box {
             width: 100%;

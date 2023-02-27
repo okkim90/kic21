@@ -3091,7 +3091,7 @@ input::-webkit-search-results-decoration {
   background-position: center center;
   background-size: 100% 100%;
   transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1);
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
 }
 .item1 .main_intro_link::before {
   background-image: url("../images/main/main_intro1.png");
@@ -3105,16 +3105,6 @@ input::-webkit-search-results-decoration {
   background-image: url("../images/main/main_intro3.png");
 }
 
-.main_intro_link::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
 .main_intro_link .txt_box {
   width: 100%;
   text-align: center;
