@@ -585,6 +585,11 @@
             position: relative;
             padding-top: 62%;
             overflow: hidden;
+            background-color: #ddd;
+            background-image: url(../images/common/logo_minimal_opacity.svg);
+            background-size: 100px;
+            background-position: center center;
+            background-repeat: no-repeat;
             img {
                 position: absolute;
                 left: 0;
