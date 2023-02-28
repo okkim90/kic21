@@ -109,7 +109,9 @@
             transform: scale(1.2);
             
             opacity: 0;
-
+            &.mv_m {
+                display: none;
+            }
         }
         // &::before {
         //     content: '';
