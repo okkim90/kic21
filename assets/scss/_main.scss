@@ -1002,9 +1002,16 @@
         &_progress {
             width: 130px;
         }
-        .main_visual_link img.obj_pos_left{
-            object-position: 40% center;
-        }
+        .main_visual_link {
+            img {
+                &.mv_pc {
+                    display: none;
+                }
+                &.mv_m {
+                    display: block;
+                }
+            }
+        } 
         
     }
 

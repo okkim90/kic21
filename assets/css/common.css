@@ -3684,9 +3684,11 @@ input::-webkit-search-results-decoration {
   .main_visual_progress {
     width: 130px;
   }
-  .main_visual .main_visual_link img.obj_pos_left {
-    -o-object-position: 40% center;
-       object-position: 40% center;
+  .main_visual .main_visual_link img.mv_pc {
+    display: none;
+  }
+  .main_visual .main_visual_link img.mv_m {
+    display: block;
   }
   .main_intro_list {
     margin-top: -15px;
