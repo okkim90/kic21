@@ -13,6 +13,18 @@
         @include mobile { 
             margin-bottom: 10px;
         }
+        .btn_box {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .f_btn {
+            font-weight: 500;
+            max-width: 100%;
+            margin-left: 10px;
+            padding: 0 10px;
+        }
     }
     &_total {
         font-size: 18px;
@@ -95,7 +107,7 @@
                 box-sizing: border-box;
                 padding: 0;
                 font-size: 14px;
-                line-height: 24px;
+                line-height: 30px;
                 margin-right: 0;
                 padding-right: 0;
                 
@@ -113,8 +125,19 @@
         }
         &.num {
             width: 50px;
-            @include tablet { 
+            @include mobile {
                 display: none;
+            }
+        }
+        &.chk {
+            width: 65px;
+            line-height: 1;
+            @include mobile {
+                width: auto;
+                order: 0;
+                margin-right: 10px;
+                margin-bottom: 2px;
+                
             }
         }
         &.prod {
@@ -209,6 +232,7 @@
                 &.ty_answer {
                     order: 1;
                     margin-top: 0;
+                    line-height: 1.5;
                     &::before {
                         content:'';
                         display: inline-block;
@@ -236,6 +260,12 @@
             &.on {
                 color: blue;
             }
+            &.ty_on {
+                color: blue;
+            }
+            &.ty_soon {
+                color: hotpink;
+            }
             @include mobile { 
                 width: auto;
                 text-align: left;
@@ -243,12 +273,59 @@
                 font-size: 13px;
                 font-weight: bold;
                 order: 0;
+                margin-bottom: 2px;
+            }
+        }
+        &.order {
+            width: 70px;
+            @include mobile {
+                font-size: 13px;
+                width: auto;
+                margin-right: auto;
+                margin-bottom: 2px;
+                order: 0;
+                &::before {
+                    content:'노출순서 : ';
+                    color: #999;
+                }
             }
         }
         &.writer {
-            width: 150px;
+            width: 120px;
             flex-shrink: 0;
-            word-break: break-all;
+        }
+        &.branch {
+            width: 80px;
+            flex-shrink: 0;
+            @include mobile {
+                margin-left: auto;
+                font-size: 13px;
+                letter-spacing: -0.3px;
+                width: auto;
+                &::before {
+                    content:'지사 : ';
+                    color: #999;
+                }
+            }
+        }
+        &.q_type {
+            width: 90px;
+            @include mobile {
+                font-size: 13px;
+                width: auto;
+                letter-spacing: -0.3px;
+                &::before {
+                    content:'';
+                    display: inline-block;
+                    vertical-align: top; 
+                    width: 1px;
+                    height: 12px;
+                    background-color: #d9d9d9;
+                    margin: 0 7px;
+                    margin-top: 4px;
+
+                }
+            }
         }
         
         &.col_bot {
@@ -273,6 +350,9 @@
                     }
                 }
             }
+        }
+        .tooltip {
+            margin-left: 6px;
         }
     }
     .ico_notice {
