@@ -291,8 +291,9 @@
             }
         }
         &.writer {
-            width: 120px;
+            width: 150px;
             flex-shrink: 0;
+            word-break: break-all;
         }
         &.branch {
             width: 80px;
