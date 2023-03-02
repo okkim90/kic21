@@ -327,7 +327,7 @@
             top: 0;
             background-repeat: no-repeat;
             background-position: center center;
-            background-size: 100% 100%;
+            background-size: cover;
             transition: all .4s cubic-bezier(.55,0,.1,1);
             @for $i from 1 through 3 {
                 @at-root .item#{$i} & {
@@ -385,8 +385,8 @@
         &:hover {
             &::before {
                 filter: grayscale(1);
-                //ransform: scale(1.15);
-                background-size: 115% 115%;
+                transform: scale(1.15);
+                //background-size: 115% 115%;
                 opacity: 0.8;
             }
 
@@ -1028,6 +1028,7 @@
         &_link {
             width: 270px;
             height: 270px;
+            
             .txt_box {
                 padding: 0 30px;
                 .tit {
@@ -1043,6 +1044,9 @@
                     display: none;
                 }
             }
+        }
+        .item3 .main_intro_link::before {
+            background-position: center 62%;
         }
     }
 

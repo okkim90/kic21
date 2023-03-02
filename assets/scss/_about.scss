@@ -176,6 +176,8 @@
             width: 58.59%;
             overflow: hidden;
             border-radius: 50px;
+            isolation: isolate;
+            will-change: transform;
             @include mobile {
                 width: 100%;
                 border-radius: 20px;
