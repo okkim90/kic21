@@ -4268,6 +4268,21 @@ img.mw100 {
   font-size: 24px;
   margin-top: 18px;
 }
+.sub_tit .desc .bar {
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: #999;
+  margin: 0 10px;
+}
+@media (max-width: 767px) {
+  .sub_tit .desc .bar {
+    display: block;
+    margin: 10px auto 8px;
+    width: 20px;
+    height: 1px;
+  }
+}
 @media (max-width: 767px) {
   .sub_tit {
     padding: 40px 0 30px;

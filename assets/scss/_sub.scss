@@ -286,6 +286,21 @@ img.mw100 {
     .desc {
         font-size: 24px;
         margin-top: 18px;
+        .bar {
+            display: inline-block;
+            width: 1px;
+            height: 20px;
+            background-color: #999;
+            margin: 0 10px;
+            @include mobile {
+                display: block;
+                margin: 10px auto 8px;
+                width: 20px;
+                height: 1px;
+                
+            }
+        }
+      
     }
     @include mobile { 
         padding: 40px 0 30px;
