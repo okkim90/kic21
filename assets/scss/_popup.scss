@@ -12,17 +12,17 @@
     z-index: 99999;
     background-color: rgba(#000, .3);
 
-    // &.popup_index {
-    //     display: block;
-    //     visibility: hidden;
-    //     z-index: -9999;
-    //     opacity: 0;
-    //     &.on {
-    //         visibility: visible;
-    //         z-index: 99999;
-    //         opacity: 1;
-    //     }
-    // }
+    &.popup_index {
+        display: block;
+        visibility: hidden;
+        z-index: -9999;
+        opacity: 0;
+        &.on {
+            visibility: visible;
+            z-index: 99999;
+            opacity: 1;
+        }
+    }
     &.popup_index {
         .layer_popup_container {
             padding: 30px;

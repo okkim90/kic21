@@ -1389,6 +1389,17 @@ input::-webkit-search-results-decoration {
 .layer_popup.on {
   display: block;
 }
+.layer_popup.popup_index {
+  display: block;
+  visibility: hidden;
+  z-index: -9999;
+  opacity: 0;
+}
+.layer_popup.popup_index.on {
+  visibility: visible;
+  z-index: 99999;
+  opacity: 1;
+}
 .layer_popup.popup_index .layer_popup_container {
   padding: 30px;
 }
