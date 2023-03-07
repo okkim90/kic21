@@ -63,9 +63,9 @@ $(window).on('load resize scroll',function(){
     
    
 });
-
+nav_ani();
 function nav_ani(){
-    $header_menu.on('mouseover',function(){
+    $header_menu.on('mouseenter',function(){
         if (window.innerWidth < 1025) return;
         $header.addClass('nav_on');
     });

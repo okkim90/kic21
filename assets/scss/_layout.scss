@@ -224,20 +224,22 @@
                     color: #333;
                 }
             }
-            &:hover {
+
+            @at-root .nav_on &:hover {
                 .hm_dep1_link span::before {
                     transform: scale(1);
                 }
             }
+            
         }
-
-        &:hover {
+        @at-root .nav_on &:hover {
             .hm_dep2_box {
                 opacity: 1;
                 overflow: hidden;
                 max-height: 340px;
             }
         }
+        
         .hm_dep2_box {
             box-sizing: border-box;
             opacity: 0;

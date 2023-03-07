@@ -924,14 +924,16 @@ input::-webkit-search-results-decoration {
   color: #333;
 }
 
-.header_menu .hm_dep1:hover .hm_dep1_link span::before {
+.nav_on .header_menu .hm_dep1:hover .hm_dep1_link span::before {
   transform: scale(1);
 }
-.header_menu:hover .hm_dep2_box {
+
+.nav_on .header_menu:hover .hm_dep2_box {
   opacity: 1;
   overflow: hidden;
   max-height: 340px;
 }
+
 .header_menu .hm_dep2_box {
   box-sizing: border-box;
   opacity: 0;
