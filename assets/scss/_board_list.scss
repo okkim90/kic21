@@ -164,8 +164,9 @@
 
         }
         &.field {
-            width: 120px;
+            flex: 1;
             @include mobile { 
+                flex: none;
                 width: auto;
                 padding: 0;
                 flex-shrink: 0;
@@ -197,8 +198,9 @@
             }
         }
         &.model {
-            width: 120px;
+            flex: 1;
             @include mobile { 
+                flex: none;
                 &.col_bot::after {
                     display: none;
                 }
@@ -206,7 +208,11 @@
             
         }
         &.company {
-            width: 120px;
+            flex: 1;
+            word-break: break-all;
+            @include mobile { 
+                flex: none;
+            }
         }
         &.cate {
             width: 80px;
