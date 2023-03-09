@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+html, body {
+  background: #000;
+  font-family: "Ubuntu";
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.error_wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.error_msg {
+  font-size: 1.8em;
+  line-height: 1.5;
+  font-weight: bold;
+  color: #FD4EBD;
+}
+.error_ani {
+  max-width: 500px;
+  width: 100%;
+  border: 2px solid #FD4EBD;
+  background-color: #000;
+  box-sizing: border-box;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px 0 30px;
+}
+.error_btn {
+  width: 200px;
+  height: 50px;
+  font-size: 1.5em;
+  text-align: center;
+  border: 2px solid #FD4EBD;
+  color: #FD4EBD;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 50px;
+  border-radius: 10px;
+  transition: all 0.16s ease-in-out;
+}
+.error_btn:hover {
+  background-color: rgba(253, 78, 189, 0.2);
+}

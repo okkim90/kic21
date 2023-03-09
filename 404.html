@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/404.css">
+    <script src="./assets/js/jquery-3.1.1.min.js"></script>
+    <script src="./assets/js/lottie.min.js"></script>
+</head>
+<body>
+    <div class="error_wrap">
+        <div class="error_msg">
+            페이지를 찾을 수 없습니다 ㅠ.ㅠ
+        </div>
+        <div class="error_ani"> </div>
+        <a href="/" class="error_btn">돌아가기</a>
+    </div>
+    <script>
+        var errorAni = bodymovin.loadAnimation({
+            container: $('.error_ani')[0], // the dom element
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: './assets/images/T-rex.json'
+        });
+        
+    </script>   
+</body>
+</html>
+
