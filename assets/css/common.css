@@ -6046,6 +6046,43 @@ img.mw100 {
   max-width: 1140px;
 }
 
+.rnd_patent7_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+@media (max-width: 767px) {
+  .rnd_patent7_list {
+    gap: 20px;
+  }
+}
+.rnd_patent7_list li {
+  width: calc(50% - 20px);
+  border: 1px solid #bababa;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 30px;
+}
+@media (max-width: 767px) {
+  .rnd_patent7_list li {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.rnd_patent7_list li img {
+  width: 410px;
+  max-width: 100%;
+}
+.rnd_patent7_list li .txt_box {
+  font-size: 18px;
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  .rnd_patent7_list li .txt_box {
+    font-size: 14px;
+  }
+}
+
 .tbl_rnd {
   width: 100%;
 }
