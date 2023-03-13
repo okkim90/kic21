@@ -4358,6 +4358,28 @@ img.mw100 {
   height: 22px;
   background: url(../images/common/icon_down_black.svg) no-repeat center center;
 }
+.btn_download.ty_bd {
+  border: 1px solid #222;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  line-height: 58px;
+  height: 60px;
+  box-sizing: border-box;
+  width: 250px;
+  padding: 0 20px;
+}
+@media (max-width: 767px) {
+  .btn_download.ty_bd {
+    width: 160px;
+    margin-bottom: 0;
+    line-height: 28px;
+    height: 30px;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+    top: -5px;
+  }
+}
 @media (max-width: 767px) {
   .btn_download {
     font-size: 13px;
