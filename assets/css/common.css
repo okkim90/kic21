@@ -1207,10 +1207,11 @@ input::-webkit-search-results-decoration {
     display: flex;
     flex-shrink: 0;
     padding: 20px 27px 30px;
+    flex-wrap: wrap;
+    gap: 8px;
   }
   .nav_top_item {
-    flex: 1;
-    padding: 0 3px;
+    width: calc(50% - 4px);
   }
   .nav_top_item a {
     display: block;
@@ -4023,14 +4024,14 @@ img.mw100 {
 
 .right_nav {
   position: absolute;
-  left: calc(100% + 60px);
+  left: calc(100% + 50px);
   top: 0;
   white-space: nowrap;
   background-color: #ecf2fa;
   border-radius: 20px;
   border: 1px solid #c5d1e6;
-  width: 140px;
-  padding: 0 20px;
+  width: 130px;
+  padding: 0 16px;
   box-sizing: border-box;
 }
 .right_nav_area {
@@ -4075,10 +4076,11 @@ img.mw100 {
 }
 .right_nav_item i {
   display: block;
-  height: 40px;
+  height: 34px;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .right_nav_item i.ico_fm1 {
   background-image: url(../images/common/ico_fm1.svg);
@@ -4088,6 +4090,9 @@ img.mw100 {
 }
 .right_nav_item i.ico_fm3 {
   background-image: url(../images/common/ico_fm3.svg);
+}
+.right_nav_item i.ico_fm4 {
+  background-image: url(../images/common/ico_fm4.svg);
 }
 .right_nav_item .num_list {
   text-align: left;

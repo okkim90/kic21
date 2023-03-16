@@ -548,9 +548,10 @@
             display: flex;
             flex-shrink: 0;
             padding: 20px 27px 30px;
+            flex-wrap: wrap;
+            gap: 8px;
             &_item {
-                flex: 1;
-                padding: 0 3px;
+                width: calc(50% - 4px);
                 a {
                     display: block;
                     font-size: 14px;
