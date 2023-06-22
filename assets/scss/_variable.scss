@@ -27,7 +27,7 @@ $colors: (
     _sky: #f6f7fa,
     _red: #f02727,
     _lblue: #46b8ff,
-    _orange: #ff7328,
+    _orange: #FF6B00,
     _green: #50c785,
     _yellow: #ff0,
     _purple: #3b1e9e,
@@ -42,6 +42,17 @@ $colors: (
 $c_key : map-get($colors, _key);
 $c_red : map-get($colors, _red);
 $c_sky : map-get($colors, _sky);
+
+
+@each $key, $color in $colors {
+    .bg#{$key} {
+        background-color: $color;
+    }
+    .f_btn.bg#{$key} {
+        background-color: $color;
+    }
+}
+
 
 //Font
 $font: 'Noto Sans KR', sans-serif;

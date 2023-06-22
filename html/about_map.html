@@ -616,6 +616,13 @@
         }
 
         panTo(0);
+
+
+        // param setting
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        let idx = urlParams.get('idx');
+        $('.sub_tab_item').eq(idx).find('.sub_tab_link').trigger('click');
     </script>
 </body>
 </html>

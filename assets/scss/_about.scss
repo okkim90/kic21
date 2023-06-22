@@ -813,6 +813,7 @@
     
     &_item {
         cursor: pointer;
+        text-align: center;
         .img_box {
             box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
             position: relative;
@@ -825,7 +826,7 @@
             text-align: center;
             margin-top: 30px;
             font-size: 18px;
-            line-height: 1.78;
+            line-height: 1.7;
             word-break: break-all;
             @include tablet {
                 font-size: 16px;
@@ -838,7 +839,40 @@
                 margin-top: 10px;
                 word-break: break-all;
             }
+            
         }
+        .btn_pdf_down {
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            line-height: 1.78;
+            i {
+                width: 22px;
+                height: 22px;
+                background: url('../images/common/icon_down_black.svg') no-repeat center center;
+                margin-left: 9px;
+            }
+            @include tablet {
+                font-size: 16px;
+                line-height: 1.6;
+                i {
+                    margin-left: 6px;
+                }
+            }
+            @include mobile {
+                font-size: 14px;
+                line-height: 1.6;
+                i {
+                    margin-left: 4px;
+                    width: 18px;
+                    height: 18px;
+                    background-size: cover;
+                }
+            }
+        }
+
         @include mobile { 
             margin-top: 30px;
         }

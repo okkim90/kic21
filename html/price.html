@@ -265,25 +265,32 @@
                         <li class="sub_tab_item"><a href="" class="sub_tab_link">대전지사</a></li>
                     </ul>
                 </div>
-                <form action="" class="search_form">
-                    <div class="search_form_sec">
-                        <label for="">계측기명</label>
-                        <input type="search" placeholder="" class="search_form_input">
-                    </div>
-                    <div class="search_form_sec">
-                        <label for="">제조사</label>
-                        <input type="search" placeholder="" class="search_form_input">
-                    </div>
-                    <div class="search_form_sec">
-                        <label for="">모델명</label>
-                        <input type="search" placeholder="" class="search_form_input">
-                    </div>
-                    <div class="search_form_btns">
-                        <button type="button" class="search_form_btn2 btn_search"><span class="blind">찾기</span></button>
-                        <button type="button" class="search_form_btn2 btn_toggle_detail on" onclick="toggle_detail()"><span class="blind">상세보기</span></button>
-                        <!-- [DEV] ".btn_toggle_detail" 버튼 클릭시 상세검색 활성화 -->
-                    </div>
-                </form>
+                <div class="search_form_wrap">
+                    <form action="" class="search_form">
+                        <div class="search_form_sec">
+                            <label for="">계측기명</label>
+                            <input type="search" placeholder="" class="search_form_input">
+                        </div>
+                        <div class="search_form_sec">
+                            <label for="">제조사</label>
+                            <input type="search" placeholder="" class="search_form_input">
+                        </div>
+                        <div class="search_form_sec">
+                            <label for="">모델명</label>
+                            <input type="search" placeholder="" class="search_form_input">
+                        </div>
+                        <div class="search_form_btns">
+                            <button type="button" class="search_form_btn2 btn_search"><span class="blind">찾기</span></button>
+                            <button type="button" class="search_form_btn2 btn_toggle_detail on" onclick="toggle_detail()"><span class="blind">상세보기</span></button>
+                            <!-- [DEV] ".btn_toggle_detail" 버튼 클릭시 상세검색 활성화 -->
+                        </div>
+                    </form>
+                    <div class="kic_list_info">
+                        <i class="ico_info"></i>
+                        <p class="txt">교정단가는 시점, 교정분야, 모델에 따라 다소 차이가 있을 수 있으니 자세한 사항은 문의하시기 바랍니다. (표준소급료(10%) 및 부가세(10%) 별도)</p>
+                    </div>    
+                </div>
+               
                 <script>
                     function toggle_detail(){
                         let $btn = $('.btn_toggle_detail');
@@ -445,10 +452,6 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
-                    <div class="kic_list_info">
-                        <i class="ico_info"></i>
-                        <p class="txt">교정단가는 항목, 포인트, 형식에 따라 다소 차이가 있을 수 있으니 자세한 사항은 문의하시기 바랍니다. <br> 표준 소급료(10%) 및 부가세(10%) 별도</p>
                     </div>
                     <div class="paging_wrap">
                         <a href="" class="paging_btn ty_first"><span class="blind">처음</span></a>

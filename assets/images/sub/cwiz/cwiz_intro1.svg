@@ -1,0 +1,15 @@
+<svg width="290" height="290" viewBox="0 0 290 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="290" height="290" rx="30" fill="#212261"/>
+<rect x="45" y="73" width="200" height="143" rx="6" fill="#F6F7FA" fill-opacity="0.12"/>
+<rect x="67" y="98" width="157" height="15" rx="2" fill="#F6F7FA" fill-opacity="0.15"/>
+<rect x="67" y="120" width="157" height="14" rx="2" fill="#F6F7FA" fill-opacity="0.15"/>
+<rect x="67" y="141" width="74" height="53" rx="2" fill="#F6F7FA" fill-opacity="0.15"/>
+<rect x="147" y="141" width="77" height="53" rx="2" fill="#F6F7FA" fill-opacity="0.15"/>
+<rect x="157" y="150" width="27" height="16" rx="2" fill="#414278"/>
+<rect x="157" y="170" width="27" height="16" rx="2" fill="#414278"/>
+<rect x="188" y="170" width="27" height="16" rx="2" fill="#414278"/>
+<rect x="188" y="150" width="27" height="16" rx="2" fill="#FF6B00"/>
+<circle cx="228.176" cy="162.907" r="18.3022" transform="rotate(7.9251 228.176 162.907)" stroke="white" stroke-width="4"/>
+<path d="M253.494 198.642C254.182 199.506 255.44 199.648 256.304 198.96C257.168 198.272 257.311 197.013 256.622 196.149L253.494 198.642ZM237.631 178.731L253.494 198.642L256.622 196.149L240.76 176.238L237.631 178.731Z" fill="white"/>
+<path d="M244.031 193.26L253.311 186.226L263.598 199.797C265.54 202.36 265.037 206.012 262.475 207.954C259.912 209.896 256.26 209.394 254.318 206.831L244.031 193.26Z" fill="#FF6B00"/>
+</svg>

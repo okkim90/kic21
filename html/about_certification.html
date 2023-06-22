@@ -277,8 +277,9 @@
                                         </div>
                                     </div> 
                                     <div class="txt_box">
-                                        국가공인교정기관인증서(국문) <br> 서울본사
+                                        공인교정기관인증서(국문) 서울본사
                                     </div>
+                                    <a href="/document/download/" class="btn_pdf_down">다운로드 <i></i></a>
                                 </div>
                                 <div class="swiper-slide certification_list_item" onclick="certification_modal(this)">
                                     <div class="img_box hover_layer_p">
@@ -291,8 +292,9 @@
                                         </div>
                                     </div> 
                                     <div class="txt_box">
-                                        국가공인교정기관인증서(영문) <br> 서울본사
+                                        공인교정기관인증서(영문) 서울본사
                                     </div>
+                                    <a href="" class="btn_pdf_down">다운로드 <i></i></a>
                                 </div>
                                 <div class="swiper-slide certification_list_item" onclick="certification_modal(this)">
                                     <div class="img_box hover_layer_p">
@@ -305,8 +307,9 @@
                                         </div>
                                     </div> 
                                     <div class="txt_box">
-                                        국가공인교정기관인증서 (국문) <br> 부산지사
+                                        공인교정기관인증서(국문) 부산지사
                                     </div>
+                                    <a href="#none" class="btn_pdf_down">다운로드 <i></i></a>
                                 </div>
                                 <div class="swiper-slide certification_list_item" onclick="certification_modal(this)">
                                     <div class="img_box hover_layer_p">
@@ -319,8 +322,9 @@
                                         </div>
                                     </div> 
                                     <div class="txt_box">
-                                        국가공인교정기관인증서 (영문) <br> 부산지사
+                                        공인교정기관인증서(영문) 부산지사
                                     </div>
+                                    <a href="#none" class="btn_pdf_down">다운로드 <i></i></a>
                                 </div>
                             </div>
                             <div class="certification_list_bot">
@@ -585,6 +589,11 @@
             initSwiper();
         });  
         
+
+        $('.btn_pdf_down').on('click',function(e){
+            e.stopPropagation();
+        });
+
 
         let $popup_container = $('.popup_certification');
         let $popup_container_tit = $('.popup_certification .tit');
