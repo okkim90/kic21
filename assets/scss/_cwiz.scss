@@ -140,6 +140,7 @@
 .cwiz_service {
     padding: 150px 0;
     background-color: #F6F7FA;
+    overflow: hidden;
     @include tablet { 
         padding: 100px 0;
     }
