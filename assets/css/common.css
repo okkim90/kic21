@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/* 공통 */ /* noto-sans-kr-100 - latin_korean */
+/* 공통 */
+/* noto-sans-kr-100 - latin_korean */
 @font-face {
   font-family: "Noto Sans KR";
   font-style: normal;
@@ -3527,6 +3528,136 @@ input::-webkit-search-results-decoration {
   background-image: url("../images/main/mb_ico3.svg");
 }
 
+.main_link_list {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 767px) {
+  .main_link_list {
+    flex-wrap: wrap;
+    gap: 30px 0;
+  }
+}
+.main_link_item {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .main_link_item {
+    width: 50%;
+  }
+  .main_link_item:nth-child(odd) {
+    transition-delay: 0s !important;
+  }
+  .main_link_item:nth-child(even) {
+    transition-delay: 0.2s !important;
+  }
+}
+.main_link_item a {
+  display: inline-block;
+}
+.main_link_item a:hover .ico_box {
+  background-color: #1f2085;
+}
+.main_link_item a:hover .ico_box.link1 {
+  background-image: url(../images/main/main_ico1_ov.svg);
+}
+.main_link_item a:hover .ico_box.link2 {
+  background-image: url(../images/main/main_ico2_ov.svg);
+}
+.main_link_item a:hover .ico_box.link3 {
+  background-image: url(../images/main/main_ico3_ov.svg);
+}
+.main_link_item a:hover .ico_box.link4 {
+  background-image: url(../images/main/main_ico4_ov.svg);
+}
+.main_link_item .ico_box {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: #F3F3F3;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 0.14s ease-in-out;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .main_link_item .ico_box {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media (max-width: 767px) {
+  .main_link_item .ico_box {
+    width: 110px;
+    height: 110px;
+    background-size: auto 40px;
+  }
+}
+.main_link_item .ico_box.link1 {
+  background-image: url(../images/main/main_ico1.svg);
+}
+.main_link_item .ico_box.link1::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url(../images/main/main_ico1_ov.svg);
+}
+.main_link_item .ico_box.link2 {
+  background-image: url(../images/main/main_ico2.svg);
+}
+.main_link_item .ico_box.link2::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url(../images/main/main_ico2_ov.svg);
+}
+.main_link_item .ico_box.link3 {
+  background-image: url(../images/main/main_ico3.svg);
+}
+.main_link_item .ico_box.link3::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url(../images/main/main_ico3_ov.svg);
+}
+.main_link_item .ico_box.link4 {
+  background-image: url(../images/main/main_ico4.svg);
+}
+.main_link_item .ico_box.link4::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url(../images/main/main_ico4_ov.svg);
+}
+.main_link_item strong {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-top: 20px;
+  color: #222;
+}
+@media (max-width: 1024px) {
+  .main_link_item strong {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .main_link_item strong {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
 .main_notice_wrap {
   overflow: hidden;
 }
@@ -5793,13 +5924,9 @@ img.mw100 {
   .commission_list .commission_link:hover .tit .ico_detail {
     background-image: url(../images/common/ico_search_s_w.svg);
   }
-}
-@media (hover: hover) and (pointer: fine) {
   .commission_list .commission_link:hover .desc {
     color: #fff;
   }
-}
-@media (hover: hover) and (pointer: fine) {
   .commission_list .commission_link:hover .ico_view {
     color: #fff;
   }
