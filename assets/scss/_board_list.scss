@@ -3,7 +3,18 @@
     border-bottom: 1px solid #222;
     font-size: 16px;
     line-height: 1.5;
-    
+    &.ty_price {
+        font-size: 14px;
+        .kic_list_link {
+            min-height: 47px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            @include mobile {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
 
     &_top {
         display: flex;
@@ -142,12 +153,12 @@
         }
         &.prod {
             flex: 1;
-            text-align: left;
-            display: flex;
+            //text-align: left;
+            //display: flex;
             align-items: center;
             line-height: 1.7;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            // padding-top: 10px;
+            // padding-bottom: 10px;
             min-width: 0;
             color: #222;
             @include mobile { 
@@ -159,12 +170,13 @@
                 line-height: 24px;
                 margin-right: 0;
                 padding-right: 0;
+                text-align: left;
                 
             }
 
         }
         &.field {
-            flex: 1;
+            flex: 0.8;
             @include mobile { 
                 flex: none;
                 width: auto;
@@ -183,7 +195,7 @@
         }
         &.price {
             width: 100px;
-            text-align: right;
+            //text-align: right;
             font-weight: bold;
             @include mobile { 
                 width: 100%;
@@ -191,14 +203,75 @@
                 margin-top: 5px;
                 padding-top: 5px;
                 font-size: 14px;
-                color: #222;  
+                //color: #222;  
+                text-align: right;
                 &::before {
                     content: '₩';
+                }
+                &.fc_grey2 {
+                    display: none;
+                    &::before {
+                        display: none;
+                        
+                    }
+                }
+            }
+        }
+        &.history {
+            flex: 2;
+            
+            .price_history {
+                text-align: left;
+            }
+
+            @include mobile {
+                width: 100%;
+                flex: auto;
+               
+                margin-top: 5px;
+                font-size: 12px;
+                color: #666;
+                .price_history {
+                    text-align: right;
+                }
+            }
+            &_detail {
+                display: none;
+                // display: flex;
+                // justify-content: flex-end;
+                
+                padding: 15px 20px;
+                border-top: 1px dashed #d9d9d9;
+                background-color: #f6f7fa;
+                &.on {
+                    display: block;
+                }
+                @include mobile {
+                    font-size: 12px;
+                    padding: 10px;
+                }
+                .price_history {
+        
+                    li {
+                        position: relative;
+                        padding-left: 0.8em;
+                        text-align: left;
+                        &::before {
+                            content:'•';
+                            color: #999;
+                            left: 0;
+                            top: 0;
+                            position: absolute;
+                        }
+                        & + li {
+                            margin-top: 4px;
+                        }
+                    }
                 }
             }
         }
         &.model {
-            flex: 1;
+            flex: 0.8;
             @include mobile { 
                 flex: none;
                 &.col_bot::after {
@@ -423,6 +496,50 @@
             @include mobile {
                 margin-left: 6px;
                 font-size: 13px;
+            }
+        }
+    }
+
+    
+    
+
+    .btn_toggle {
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        //font-size: 16px;
+        background-color: #1e90ff;
+        color: #fff;
+        border-radius: 4px;
+        padding: 4px 8px;
+        @include mobile {
+            margin-top: 5px;
+            margin-left: auto;
+            font-size: 12px;
+        }
+        &::after {
+            content: '';
+            box-sizing: border-box;
+            width: 8px;
+            height: 8px;
+            border-left: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            transform: rotate(-45deg);
+            margin-top: -3px;
+            margin-left: 6px;
+            @include mobile {
+                width: 6px;
+                height: 6px;
+                margin-top: -2px;
+            }
+        }
+        &.on {
+            &::after {
+                transform: rotate(135deg);
+                margin-top: 3px;
+                @include mobile { 
+                    margin-top: 2px;
+                }
             }
         }
     }
