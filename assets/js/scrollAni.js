@@ -5,7 +5,7 @@ $.fn.isInViewport = function() {
     var elementBottom = elementTop + $(this).outerHeight();
     var viewportTop = $(window).scrollTop();
     var viewportBottom = viewportTop + $(window).height();
-    return (elementBottom > viewportTop + vh/10)  && (elementTop < viewportBottom - vh/10 ) ;
+    return (elementBottom > viewportTop )  && (elementTop < viewportBottom ) ;
 };
 
 
@@ -17,8 +17,13 @@ $(function(){
     });
     $(window).on('load resize scroll',function(){
         $('.aniBox').each(function(){
-            if($(this).isInViewport()){
-                $(this).addClass('gogo');
+            let target = $(this);
+            if(target.isInViewport()){
+                setTimeout(function(){
+                    console.log('123123')
+                    target.addClass('gogo');
+                },100)
+                
             }
         });
     });

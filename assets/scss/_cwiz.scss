@@ -1,128 +1,175 @@
-.cwiz_intro {
-    padding-bottom: 150px;
-    @include tablet { 
-        padding-bottom: 100px;
-    }
-    @include mobile { 
-        padding-bottom: 60px;
-    }
-    &_top {
-        background-color: #F6F7FA;
-        border-radius: 50px 0 50px 0;
-        padding: 70px 80px;
-        display: flex;
-        align-items: center;
+.cwiz_sec {
+    overflow: hidden;
+    &_tit {
+        font-size: 40px;
+        text-align: center;
+        font-weight: bold;
         @include tablet { 
-            padding: 50px;
-            display: block;
+            font-size: 36px;
         }
         @include mobile { 
-            padding: 30px;
-            border-radius: 30px 0 30px 0;
+            font-size: 26px;
         }
-        .tit , .desc {
-            flex: 1;
-            width: 50%;
-            box-sizing: border-box;
-            @include tablet {  
-                width: 100%;
+    }
+}
+
+.cwiz_intro {
+    padding-top: 120px;
+    overflow: hidden;
+    background-color: #eee;
+    @include tablet { 
+        padding-top: 100px
+    }
+    @include mobile { 
+        padding-top: 60px;
+        .btn_area.ty_bot {
+            margin-top: 30px;
+        }
+    }
+    &_outer {
+        border: 5px solid transparent;
+        border-radius: 40px 40px 0 0;
+        border-bottom: none;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(#000, .5);
+        background-image: linear-gradient(#fff, #fff), 
+        linear-gradient(to top, #bbb 0%,  #ddd 100%);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        @include mobile { 
+            border-width: 3px;
+            border-radius: 16px 16px 0 0;
+        }
+    }
+    &_inner {
+        //padding: 120px;
+        border-radius: 12px 12px 0 0;
+        margin: -8px;
+        margin-bottom: 0;
+        padding: 100px 30px 100px;
+        background-color: #fff;
+        @include mobile { 
+            border-radius: 6px 6px 0 0;
+            margin: -6px;
+            padding: 50px 20px 50px;
+        }
+    }
+    &_top {
+        position: relative;
+        border: 40px solid transparent;
+        //border-radius: 40px 40px 0 0;
+        border-bottom: none;
+        //padding: 8px;
+        background-image: linear-gradient(#fff, #fff), 
+        linear-gradient(to top, #000 0%,  #222 100%);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        @include mobile { 
+            border-width: 16px;
+        }
+        .d_camera {
+            position: absolute;
+            width: 120px;
+            margin-left: -60px;
+            height: 26px;
+            background-color: #222;
+            border-radius: 0 0 8px 8px;
+            left: 50%;
+            top: -10px;
+            @include mobile {  
+                width: 100px;
+                height: 20px;
+                margin-left: -50px;
+            }
+
+        }
+        .logo_box {
+            margin-bottom: 60px;
+            @include mobile { 
+                margin-bottom: 30px;
+            }
+            img {
+                max-width: 360px;
+                @include mobile {
+                    max-width: 180px;
+                }
             }
         }
+        text-align: center;
         .tit {
-            padding-right: 50px;
-            font-size: 40px;
-            @media (max-width: 1200px) {
-                font-size: 36px;
+            font-size: 50px;
+            font-weight: 600;
+            .m_only { 
+                display: none;
+            }
+            @include tablet {
+                .m_only {
+                    display: block;
+                }
+            }
+            @include mobile {   
+                font-size: 24px;
                 
             }
-            @include tablet { 
-                padding-right: 0;
-            }
-            @include mobile { 
-                font-size: 22px;
-            }
-            
         }
         .desc {
-            padding-left: 70px;
-            
-            position: relative;
-            @include tablet { 
-                padding-left: 0;
-                padding-top: 30px;
-                margin-top: 30px;
-            }
-            @include mobile { 
-                padding-top: 20px;
+            font-size: 30px;
+            margin-top: 60px;
+            @include mobile {   
+                font-size: 16px;
                 margin-top: 20px;
             }
-            &::before {
-                content: '';
-                width: 1px;
-                height: 100px;
-                background-color: #ddd;
-                position: absolute; 
-                left: 0;
-                top: 50%;
-                margin-top: -50px;
-                @include tablet { 
-                    margin-top: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 1px;
-
-                }
-            }
-            strong {
+        }
+        
+    }
+    
+}
+.cwiz_subject {
+    padding: 120px 0;
+    background-color: lighten($c_key, 63%);
+    @include tablet { 
+        padding: 100px 0;
+    }
+    @include mobile { 
+        padding: 60px 0;
+    }
+    &_tit {
+        font-size: 30px;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 60px;
+        br.m_only {
+            display: none;
+        }
+        @include tablet {  
+            font-size: 28px;
+        }
+        @include mobile {  
+            font-size: 20px;
+            margin-bottom: 30px;
+            br.m_only {
                 display: block;
-                font-size: 20px;
-                @include mobile { 
-                    font-size: 16px;
-                }
-            }
-            p {
-                font-size: 18px;
-                line-height: 1.7;
-                margin-top: 10px;
-                @include tablet { 
-                    br {
-                        display: none;
-                    }
-                }
-                @include mobile { 
-                    font-size: 14px;
-                }
             }
         }
     }
     &_list {
         display: flex;
         gap: 40px;
-        margin-top: 100px;
         @include tablet {
-            gap: 20px;
-            margin-top: 60px;
-        }
-        @include mobile {
-            margin-top: 40px;
             flex-wrap: wrap;
             gap: 30px 20px;
+           
+        }
+        @include mobile {
+            display: block;
+            margin-top: 0;
         }
 
         li {
             flex: 1;
             text-align: center;
-            .desc {
-                display: block;
-                margin-top: 30px;
-                font-size: 20px;
-                font-weight: bold;
-                @include mobile {
-                    font-size: 16px;
-                    margin-top: 10px;
-                }
-            }
-            @include mobile {
+           
+            @include tablet {
                 flex: none;
                 width: calc(50% - 10px);
                 &.aniBox { 
@@ -133,25 +180,86 @@
                 }
                     
             }
+            @include mobile { 
+                display: flex;
+                align-items: center;
+                width: calc(100%);
+                gap: 0 20px;
+                & + li {
+                    margin-top: 20px;
+                }
+            }
+            .img_box {
+                max-width: 240px;
+                margin: 0 auto;
+                @include mobile {  
+                    width: 100px;
+                    margin: 0;
+                }
+            }
+            .txt_box {
+                display: block;
+                margin-top: 30px;
+                line-height: 1.7;
+                @include tablet {
+                    margin-top: 20px;
+                }
+                @include mobile {
+                    margin-top: 0;
+                    flex: 1;
+                    text-align: left;
+                }
+                .tit {
+                    font-size: 24px;
+                    font-weight: bold;
+                    @include tablet {
+                        font-size: 20px;
+                        line-height: 1.4;
+                    }
+                    @include mobile {
+                        font-size: 18px;
+                    }
+                }
+                .desc {
+                    font-size: 18px;
+                    color: #555;
+                    margin-top: 10px;
+                    @include tablet {
+                        font-size: 16px;
+                        
+                    }
+                    @include mobile {
+                        font-size: 15px;
+                        br {
+                            display: none;
+                        }
+                    };
+                    
+                }
+                
+            }
+            
         }
     }
 }
 
 .cwiz_service {
-    padding: 150px 0;
+    padding: 120px 0;
     background-color: #F6F7FA;
     overflow: hidden;
     @include tablet { 
         padding: 100px 0;
     }
     @include mobile { 
-        padding: 60px 0;
+        padding: 30px 0 60px;
     }
     &_item {
         display: flex;
         align-items: center;
-        gap: 40px;
-
+        gap: 100px;
+        & + & {
+            margin-top: 40px;
+        }
         @include tablet { 
             gap: 30px;
         }
@@ -166,13 +274,29 @@
        
 
         
-        .img_box , .txt_box {
-            width: 50%;
+        .img_box {
+            flex: 1.2;
             @include mobile { 
                 width: 100%;
             }
-            
         }
+        .txt_box {
+            flex: 1;
+            @include mobile {  
+                width: 100%;
+            }
+        }
+
+        &:nth-child(even) {
+            .txt_box {
+                text-align: right;
+                @include mobile {  
+                    text-align: center;
+                }
+            }
+        }
+
+
         &:nth-child(odd) {
             flex-direction: row-reverse;
             @include mobile { 
@@ -191,7 +315,7 @@
             }
            
             .keypoint {
-                display: flex;
+                display: inline-flex;
                 align-items: center;
                 font-weight: bold;
                 font-size: 1em;
@@ -241,14 +365,7 @@
             img {
                 transition: transform .2s ease-in-out;
             }
-            &:hover {
-                img {
-                    transform: scale(1.1);
-                    @include mobile {
-                        transform: scale(1);
-                    }
-                }
-            }
+            
         }
     }
 }
@@ -324,3 +441,340 @@
     }
     
  }
+
+.cwiz_pointmall {
+    padding: 100px 0 120px;
+    background-image: url(../images/sub/cwiz/bg.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    @include tablet {
+        padding: 80px 0 100px;
+    }
+    @include mobile {
+        padding: 60px 0 60px;
+    }
+
+    &_cont {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        @include tablet {
+            gap: 30px;
+        }
+        @include mobile {
+            display: block;
+        }
+
+        .txt_box {
+            text-align: center;
+            flex: 1.2;
+            font-size: 20px;
+            @include mobile { 
+                font-size: 16px;
+            }
+            .tit {
+                font-size: 55px;
+                font-weight: bold;
+                margin-bottom: 40px;
+                line-height: 1.2;
+                @include mobile { 
+                    font-size: 36px;
+                    margin-bottom: 26px;
+                }
+            }
+            
+        }
+        .img_box {
+            flex: 1;
+            @include mobile {  
+                margin-top: 30px;
+            }
+        }
+    }
+    .banner_list {
+        margin-top: 50px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        @include tablet {
+            gap: 10px;
+        }
+        @include mobile {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        &_item {
+            border-radius: 12px;
+            overflow: hidden;
+            flex: 1;
+            box-shadow: 0 0 20px rgba(#000, .6);
+            &:nth-child(even) {
+                margin-top: 4%;
+                @include mobile { 
+                    margin-top: 0;
+                }
+            }
+            @include tablet { 
+                border-radius: 8px;
+            }
+            @include mobile {
+                flex: none;
+                width: calc(25% - 10px);
+            }
+        }
+    }
+}
+
+.cwiz_app {
+    padding: 120px 0;
+    @include tablet { 
+        padding: 100px 0;
+    }
+    @include mobile { 
+        padding: 60px 0;
+    }
+    .cwiz_sec_tit {
+        br.m_only {
+            display: none;
+            @include mobile {
+                display: block;
+            }
+        }
+    }
+    .app_type {
+        display: inline-flex;
+        vertical-align: top;
+        align-items: center;
+        gap: 0.2em;
+        .app_ico {
+            width: 1.2em;
+            height: 1.2em;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            &.ico_and {
+                background-image: url(../images/sub/cwiz/android-svgrepo-com.svg);
+            }
+            &.ico_ios {
+                background-image: url(../images/sub/cwiz/apple-svgrepo-com.svg);
+            }
+        }
+    }
+    .app_detail {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        text-align: center;
+        @include tablet { 
+            gap: 60px;
+            margin-top: 50px;
+        }
+        @include mobile { 
+            gap: 10px;
+            margin-top: 30px;
+        }
+        &_item {
+            width: 260px;
+            
+            .txt_box {
+                font-size: 20px;
+                font-weight: 500;
+                margin-top: 20px;
+                @include mobile {  
+                    font-size: 14px;
+                    margin-top: 14px;
+                }
+            }
+        }
+    }
+}
+
+.cwiz_push {
+    padding: 120px 0;
+    background-color: lighten($c_key, 65%);
+    @include tablet { 
+        padding: 100px 0;
+    }
+    @include mobile { 
+        padding: 60px 0;
+    }
+    &_cont {
+        
+        display: flex;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-top: 60px;
+        @include mobile {
+            margin-top: 30px;
+        }
+    }
+    &_img {
+        width: 20%;
+        img {
+            width: 180%;
+        }
+        @include mobile {
+            width: 10%;
+            img {
+                width: 500%;
+            }
+        }
+    }
+    &_list {
+       flex: 1;
+      
+    }
+    &_item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        //width: 100%;
+        position: relative;
+        transform: translateX(40px);
+        opacity: 0;
+        transition: opacity 0.8s cubic-bezier(0.42, 0, 0.38, 1), transform 0.8s cubic-bezier(0.42, 0, 0.38, 1);
+        @include mobile {
+            gap: 10px;
+        }
+        & + & {
+            margin-top: 12px;
+        }
+        .img_box {
+            flex: 1;
+            
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow:  0 0 12px rgba(#000, .2);
+        }
+        .txt_box {
+            width: 120px;
+            font-size: 20px;
+            flex-shrink: 0;
+            //width: 30%;
+            font-weight: 500;
+            color: $c_key;
+            @include mobile {
+                font-size: 3vw;
+                width: 16vw;
+            }
+        }
+
+        &1 {
+            padding-right: 30%;
+            @include mobile {
+                padding-right: 15%;
+            }
+            
+        }
+        &2 {
+            padding-right: 20%;
+            padding-left: 10%;
+            transition-delay: 0.2s;
+            @include mobile {
+                padding-right: 10%;
+                padding-left: 5%;
+            }
+        }
+        &3 {
+            padding-right: 10%;
+            padding-left: 20%;
+            transition-delay: 0.4s;
+            @include mobile {
+                padding-right: 5%;
+                padding-left: 10%;
+            }
+        }
+        &4 {
+            padding-left: 30%;
+            transition-delay: 0.6s;
+            @include mobile {
+               
+                padding-left: 15%;
+            }
+        }
+
+        @at-root .cwiz_push_list.gogo & {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+.cwiz_bot {
+    padding: 120px 0;
+    @include tablet { 
+        padding: 100px 0;
+    }
+    @include mobile { 
+        padding: 60px 0;
+    }
+    
+    position: relative;
+    overflow: hidden;
+    background-color: #666;
+    &::before {
+        content: '';
+        opacity: 0.6;
+        position: absolute;
+        left: -10px;
+        right: -10px;
+        top: -10px;
+        bottom: -10px;
+        background-image: url(../images/sub/cwiz/login_bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        filter: blur(3px);
+    }
+    &_cont {
+        position: relative;
+        z-index: 10;
+        padding: 80px 40px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(#000, .1);
+        max-width: 1000px;
+        margin: 0 auto;
+        @include tablet {
+            padding: 60px 40px;
+        }
+        @include mobile {
+            padding: 40px 20px;
+        }
+        .logo_box {
+            text-align: center;
+            margin-bottom: 40px;
+            img {
+                width: 260px;
+                @include tablet {
+                    width: 220px;
+                }
+                @include mobile {  
+                    width: 160px;
+                    
+                }
+            }
+            @include mobile {
+                margin-bottom: 30px;
+            }
+        }
+        .txt_box {
+            font-size: 24px;
+            text-align: center;
+            @include tablet {
+                font-size: 20px;
+            }
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+        
+    }
+}

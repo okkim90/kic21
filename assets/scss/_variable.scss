@@ -33,6 +33,7 @@ $colors: (
     _purple: #3b1e9e,
     _grey: #666,
     _grey2: #999,
+    _cwiz:#ff7a00
 );
 
 // colors
@@ -44,7 +45,7 @@ $colors: (
 $c_key : map-get($colors, _key);
 $c_red : map-get($colors, _red);
 $c_sky : map-get($colors, _sky);
-
+$c_cwiz : map-get($colors, _cwiz);
 
 @each $key, $color in $colors {
     .bg#{$key} {
