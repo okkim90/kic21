@@ -9224,7 +9224,7 @@ img.mw100 {
   padding: 120px 0;
   position: relative;
   overflow: hidden;
-  background-color: #666;
+  background-color: #F6F7FA;
 }
 @media (max-width: 1024px) {
   .cwiz_bot {
@@ -9235,20 +9235,6 @@ img.mw100 {
   .cwiz_bot {
     padding: 60px 0;
   }
-}
-.cwiz_bot::before {
-  content: "";
-  opacity: 0.6;
-  position: absolute;
-  left: -10px;
-  right: -10px;
-  top: -10px;
-  bottom: -10px;
-  background-image: url(../images/sub/cwiz/login_bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  filter: blur(3px);
 }
 .cwiz_bot_cont {
   position: relative;

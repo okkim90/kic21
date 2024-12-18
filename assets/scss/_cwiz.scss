@@ -718,21 +718,22 @@
     
     position: relative;
     overflow: hidden;
-    background-color: #666;
-    &::before {
-        content: '';
-        opacity: 0.6;
-        position: absolute;
-        left: -10px;
-        right: -10px;
-        top: -10px;
-        bottom: -10px;
-        background-image: url(../images/sub/cwiz/login_bg.jpg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        filter: blur(3px);
-    }
+    background-color: #F6F7FA;
+    //background-color: #666;
+    // &::before {
+    //     content: '';
+    //     opacity: 0.6;
+    //     position: absolute;
+    //     left: -10px;
+    //     right: -10px;
+    //     top: -10px;
+    //     bottom: -10px;
+    //     background-image: url(../images/sub/cwiz/login_bg.jpg);
+    //     background-repeat: no-repeat;
+    //     background-position: center center;
+    //     background-size: cover;
+    //     filter: blur(3px);
+    // }
     &_cont {
         position: relative;
         z-index: 10;
