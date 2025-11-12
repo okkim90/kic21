@@ -578,8 +578,7 @@ input::-webkit-search-results-decoration {
 .blind {
   border: 0;
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -3429,15 +3428,11 @@ input::-webkit-search-results-decoration {
   padding: 0 20px;
   box-sizing: border-box;
   height: 600px;
-  -webkit-clip-path: circle(0);
-          clip-path: circle(0);
-  transition: -webkit-clip-path 2s 0.2s cubic-bezier(0.55, 0, 0.1, 1);
+  clip-path: circle(0);
   transition: clip-path 2s 0.2s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: clip-path 2s 0.2s cubic-bezier(0.55, 0, 0.1, 1), -webkit-clip-path 2s 0.2s cubic-bezier(0.55, 0, 0.1, 1);
 }
 .main_intro_item.gogo {
-  -webkit-clip-path: circle(100%);
-          clip-path: circle(100%);
+  clip-path: circle(100%);
 }
 .main_intro_link {
   display: flex;
@@ -7090,7 +7085,7 @@ img.mw100 {
 .about_ceo_top {
   position: relative;
   height: 400px;
-  padding: 0 40% 0 100px;
+  padding: 0 0 0 100px;
   display: flex;
   align-items: center;
   background-color: #f6f7fa;
@@ -7099,10 +7094,9 @@ img.mw100 {
 @media (max-width: 767px) {
   .about_ceo_top {
     display: block;
-    padding: 20px 0 20px 0;
-    height: auto;
-    padding: 42px 20px 0;
     text-align: center;
+    padding: 42px 20px;
+    height: auto;
   }
 }
 .about_ceo_top .ceo_img {
@@ -7123,7 +7117,7 @@ img.mw100 {
   }
 }
 .about_ceo_top .txt_box {
-  font-size: 36px;
+  font-size: 34px;
   line-height: 1.67;
   position: relative;
   z-index: 10;
@@ -7131,11 +7125,10 @@ img.mw100 {
 }
 @media (max-width: 767px) {
   .about_ceo_top .txt_box {
-    font-size: 16px;
+    font-size: 22px;
     text-align: left;
     letter-spacing: -0.02em;
     padding-left: 20px;
-    margin-bottom: 40px;
   }
   .about_ceo_top .txt_box .pc_only {
     display: none;
@@ -7184,8 +7177,8 @@ img.mw100 {
 @media (max-width: 767px) {
   .about_ceo_top .about_ceo_top_d.d3 {
     right: 10%;
-    width: 40%;
-    bottom: 18%;
+    width: 180px;
+    bottom: 12%;
   }
 }
 
@@ -7210,6 +7203,9 @@ img.mw100 {
   font-size: 24px;
   margin-right: 15px;
 }
+.about_ceo_msg .sign_box img {
+  width: 180px;
+}
 @media (max-width: 767px) {
   .about_ceo_msg .sign_box {
     margin-top: 22px;
@@ -7219,7 +7215,7 @@ img.mw100 {
     margin-right: 6px;
   }
   .about_ceo_msg .sign_box img {
-    height: 32px;
+    width: 100px;
   }
 }
 
@@ -8554,7 +8550,7 @@ img.mw100 {
 
 .cwiz_subject {
   padding: 120px 0;
-  background-color: #ebebfa;
+  background-color: rgb(234.968902439, 235.1195121951, 250.331097561);
 }
 @media (max-width: 1024px) {
   .cwiz_subject {
@@ -9097,7 +9093,7 @@ img.mw100 {
 
 .cwiz_push {
   padding: 120px 0;
-  background-color: #f3f3fc;
+  background-color: rgb(243.2408536585, 243.3292682927, 252.2591463415);
 }
 @media (max-width: 1024px) {
   .cwiz_push {
